@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.anchikai.endium.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "ModEntityDataSaver",
+    "BrewingRecipeRegistryMixin"
+  ],
+  "client": [
+    "ExampleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

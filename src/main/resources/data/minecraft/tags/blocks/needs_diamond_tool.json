@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "endium:endium_block",
+    "endium:endium_ore",
+    "endium:raw_endium_block"
+  ]
+}

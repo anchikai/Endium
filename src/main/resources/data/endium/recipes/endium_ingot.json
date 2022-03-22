@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "endium:endium_scrap"
+    },
+    {
+      "item": "endium:endium_scrap"
+    },
+    {
+      "item": "endium:endium_scrap"
+    },
+    {
+      "item": "endium:endium_scrap"
+    },
+    {
+      "item": "endium:emerald_infused_ender_pearl"
+    },
+    {
+      "item": "endium:emerald_infused_ender_pearl"
+    },
+    {
+      "item": "endium:emerald_infused_ender_pearl"
+    },
+    {
+      "item": "endium:emerald_infused_ender_pearl"
+    }
+  ],
+  "result": {
+    "item": "endium:endium_ingot"
+  }
+}

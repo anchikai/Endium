@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "endium",
+  "version": "${version}",
+
+  "name": "Endium",
+  "description": "This is a simple mod that adds an alternative to Netherite with its own unique properties.",
+  "authors": [
+    "anchikai."
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.anchikai.endium.EndiumMod"
+    ]
+  },
+  "mixins": [
+    "endium.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

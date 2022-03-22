@@ -1,0 +1,21 @@
+{
+  "item.endium.endium_axe": "Endium Axe",
+  "item.endium.endium_boots": "Endium Boots",
+  "item.endium.endium_chestplate": "Endium Chestplate",
+  "item.endium.endium_helmet": "Endium Helmet",
+  "item.endium.endium_hoe": "Endium Hoe",
+  "item.endium.endium_ingot": "Endium Ingot",
+  "item.endium.endium_leggings": "Endium Leggings",
+  "item.endium.endium_pickaxe": "Endium Pickaxe",
+  "item.endium.endium_shovel": "Endium Shovel",
+  "item.endium.endium_sword": "Endium Sword",
+  "item.endium.raw_endium": "Raw Endium",
+  "item.endium.endium_scrap": "Endium Scrap",
+  "item.endium.emerald_infused_ender_pearl": "Emerald Infused Ender Pearl",
+
+  "block.endium.endium_block": "Block of Endium",
+  "block.endium.endium_ore": "Endium Ore",
+  "block.endium.raw_endium_block": "Block of Raw Endium",
+
+  "itemGroup.endium.endium": "Endium"
+}
