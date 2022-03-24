@@ -31,7 +31,7 @@ public abstract class ModEntityDataSaver implements IEntityDataSaver {
     @Inject(method = "readNbt", at = @At("HEAD"))
     protected void injectReadMethod(NbtCompound nbt, CallbackInfo info) {
         if (nbt.contains("endium.endium_data", 10)) {
-            persistentData = nbt.getCompound("endium.kaupen_data");
+            persistentData = nbt.getCompound("endium.endium_data");
         }
     }
 }
