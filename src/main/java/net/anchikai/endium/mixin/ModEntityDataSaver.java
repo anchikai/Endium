@@ -24,14 +24,14 @@ public abstract class ModEntityDataSaver implements IEntityDataSaver {
     @Inject(method = "writeNbt", at = @At("HEAD"))
     protected void injectWriteMethod(NbtCompound nbt, CallbackInfoReturnable info) {
         if(persistentData != null) {
-            nbt.put("tutorialmod.kaupen_data", persistentData);
+            nbt.put("endium.endium_data", persistentData);
         }
     }
 
     @Inject(method = "readNbt", at = @At("HEAD"))
     protected void injectReadMethod(NbtCompound nbt, CallbackInfo info) {
-        if (nbt.contains("tutorialmod.kaupen_data", 10)) {
-            persistentData = nbt.getCompound("tutorialmod.kaupen_data");
+        if (nbt.contains("endium.endium_data", 10)) {
+            persistentData = nbt.getCompound("endium.kaupen_data");
         }
     }
 }

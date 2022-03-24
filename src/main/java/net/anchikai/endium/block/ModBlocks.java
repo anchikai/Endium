@@ -1,19 +1,18 @@
 package net.anchikai.endium.block;
 
+import net.anchikai.endium.EndiumMod;
+import net.anchikai.endium.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.anchikai.endium.EndiumMod;
-//import net.anchikai.endium.block.custom.*;
-import net.anchikai.endium.item.ModItemGroup;
-//import net.anchikai.endium.sound.ModSounds;
-//import net.anchikai.endium.world.feature.tree.JacarandaSaplingGenerator;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.Material;
+import net.minecraft.block.OreBlock;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
@@ -26,15 +25,14 @@ import java.util.List;
 
 public class ModBlocks {
     public static final Block ENDIUM_BLOCK = registerBlock("endium_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),
-            ModItemGroup.ENDIUM, "tooltip.endium.endium_block");
+            new Block(FabricBlockSettings.of(Material.METAL).strength(50.0f, 1200.0f).requiresTool().sounds(BlockSoundGroup.NETHERITE)), ModItemGroup.ENDIUM);
 
     public static final Block ENDIUM_ORE = registerBlock("endium_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool(),
-                    UniformIntProvider.create(2, 6)), ModItemGroup.ENDIUM);
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(30.0f, 1200.0f).requiresTool(),
+                    UniformIntProvider.create(1, 1)), ModItemGroup.ENDIUM);
 
     public static final Block RAW_ENDIUM_BLOCK = registerBlock("raw_endium_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.ENDIUM);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(40.0f, 1200.0f).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS)), ModItemGroup.ENDIUM);
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
         registerBlockItem(name, block, group, tooltipKey);

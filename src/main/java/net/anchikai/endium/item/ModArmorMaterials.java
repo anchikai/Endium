@@ -10,8 +10,8 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    ENDIUM("endium", 37, new int[]{3, 6, 8, 3}, 15,
-            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 3.0f, 0.0f, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT));
+    ENDIUM("endium", 35, new int[]{3, 6, 8, 3}, 15,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.0f, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT));
 
     private static final int[] BASE_DURABILITY;
     private final String name;

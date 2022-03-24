@@ -1,0 +1,52 @@
+{
+  "parent": "endium:end/obtain_raw_endium",
+  "display": {
+    "icon": {
+      "item": "endium:endium_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "title": "Cover Me With Endium",
+    "description": "Get a full suit of Endium armor",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "endium_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "endium:endium_helmet"
+            ]
+          },
+          {
+            "items": [
+              "endium:endium_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "endium:endium_leggings"
+            ]
+          },
+          {
+            "items": [
+              "endium:endium_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "endium_armor"
+    ]
+  ]
+}
