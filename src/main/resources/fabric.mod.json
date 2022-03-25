@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.anchikai.endium.EndiumMod"
+    ],
+    "client": [
+        "net.anchikai.endium.EndiumModClient"
     ]
   },
   "mixins": [

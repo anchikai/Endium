@@ -50,8 +50,7 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.ENDIUM, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroup.ENDIUM)));
     public static final Item ENDIUM_ELYTRA = registerItem("endium_elytra",
-            new ArmorItem(ModArmorMaterials.ENDIUM, EquipmentSlot.CHEST,
-                    new FabricItemSettings().group(ModItemGroup.ENDIUM)));
+            new ModElytraItem(new FabricItemSettings().maxDamage(432).group(ModItemGroup.ENDIUM).rarity(Rarity.UNCOMMON)));
 
 
 

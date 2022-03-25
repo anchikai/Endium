@@ -2,5 +2,13 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "endium:item/endium_elytra"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "broken": 1
+      },
+      "model": "endium:item/broken_endium_elytra"
+    }
+  ]
 }
