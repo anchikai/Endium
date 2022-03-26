@@ -2,7 +2,7 @@ package net.anchikai.endium;
 
 import net.anchikai.endium.item.ModItems;
 import net.anchikai.endium.item.custom.ModElytraItem;
-import net.anchikai.endium.misc.EndiumElytraFeatureRender;
+import net.anchikai.endium.client.render.entity.feature.ModElytraFeatureRenderer;
 import net.anchikai.endium.misc.EndiumTag;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -21,7 +21,7 @@ public class EndiumModClient implements ClientModInitializer {
         FabricModelPredicateProviderRegistry.register(ModItems.ENDIUM_ELYTRA.asItem(),
                 new Identifier("broken"), (itemStack, clientWorld, livingEntity, seed) -> ModElytraItem.isUsable(itemStack) ? 0.0F : 1.0F);
 
-        LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> registrationHelper.register(new EndiumElytraFeatureRender<>(entityRenderer, context.getModelLoader())));
+        LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> registrationHelper.register(new ModElytraFeatureRenderer<>(entityRenderer, context.getModelLoader())));
         LivingEntityFeatureRenderEvents.ALLOW_CAPE_RENDER.register(EndiumModClient::allowCapeRender);
 
 

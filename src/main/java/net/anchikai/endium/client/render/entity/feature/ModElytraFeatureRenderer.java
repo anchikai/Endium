@@ -1,5 +1,6 @@
-package net.anchikai.endium.misc;
+package net.anchikai.endium.client.render.entity.feature;
 
+import net.anchikai.endium.misc.EndiumTag;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
@@ -23,12 +24,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 @Environment(value=EnvType.CLIENT)
-public class EndiumElytraFeatureRender<T extends LivingEntity, M extends EntityModel<T>>
+public class ModElytraFeatureRenderer<T extends LivingEntity, M extends EntityModel<T>>
         extends FeatureRenderer<T, M> {
     private static final Identifier SKIN = new Identifier("textures/entity/endium_elytra.png");
     private final ElytraEntityModel<T> elytra;
 
-    public EndiumElytraFeatureRender(FeatureRendererContext<T, M> context, EntityModelLoader loader) {
+    public ModElytraFeatureRenderer(FeatureRendererContext<T, M> context, EntityModelLoader loader) {
         super(context);
         this.elytra = new ElytraEntityModel<>(loader.getModelPart(EntityModelLayers.ELYTRA));
     }
@@ -37,11 +38,10 @@ public class EndiumElytraFeatureRender<T extends LivingEntity, M extends EntityM
     public void render(MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, T livingEntity, float f, float g, float h, float j, float k, float l) {
         Object abstractClientPlayerEntity;
         ItemStack itemStack = livingEntity.getEquippedStack(EquipmentSlot.CHEST);
-        if (!itemStack.isIn(EndiumTag.ENDIUM_ITEM)) {
+        if (!itemStack.isIn(EndiumTag.ENDIUM_ELYTRA)) {
             return;
         }
         Identifier identifier = livingEntity instanceof AbstractClientPlayerEntity ? (((AbstractClientPlayerEntity)(abstractClientPlayerEntity = livingEntity)).canRenderElytraTexture() && ((AbstractClientPlayerEntity)abstractClientPlayerEntity).getElytraTexture() != null ? ((AbstractClientPlayerEntity)abstractClientPlayerEntity).getElytraTexture() : (((AbstractClientPlayerEntity)abstractClientPlayerEntity).canRenderCapeTexture() && ((AbstractClientPlayerEntity)abstractClientPlayerEntity).getCapeTexture() != null && ((PlayerEntity)abstractClientPlayerEntity).isPartVisible(PlayerModelPart.CAPE) ? ((AbstractClientPlayerEntity)abstractClientPlayerEntity).getCapeTexture() : SKIN)) : SKIN;
-        System.out.println("balls");
         matrixStack.push();
         matrixStack.translate(0.0, 0.0, 0.125);
         this.getContextModel().copyStateTo(this.elytra);
@@ -50,5 +50,4 @@ public class EndiumElytraFeatureRender<T extends LivingEntity, M extends EntityM
         this.elytra.render(matrixStack, (VertexConsumer)abstractClientPlayerEntity, i, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
         matrixStack.pop();
     }
-
 }
