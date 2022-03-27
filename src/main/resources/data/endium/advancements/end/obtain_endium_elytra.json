@@ -5,14 +5,17 @@
       "item": "endium:endium_elytra"
     },
     "title": "Void's the Limit",
-    "description": "Obtain an Endium Elytra",
-    "frame": "task",
+    "description": "Smith an Endium Elytra",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
+  "rewards": {
+    "experience": 50
+  },
   "criteria": {
-    "raw_endium": {
+    "endium_elytra": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
