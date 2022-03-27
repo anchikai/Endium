@@ -28,9 +28,10 @@ public class ModElytraItem extends ElytraItem implements FabricElytraItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected){
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
-
                 if(hasEndiumElytraOn(player)) {
-                    player.addStatusEffect( new StatusEffectInstance(StatusEffects.SLOW_FALLING, 1, 0));
+                    if(player.isFallFlying()) {
+                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 1, 0));
+                    }
                 }
             }
         }

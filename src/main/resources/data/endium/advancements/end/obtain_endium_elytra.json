@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:end/elytra",
+  "display": {
+    "icon": {
+      "item": "endium:endium_elytra"
+    },
+    "title": "Void's the Limit",
+    "description": "Obtain an Endium Elytra",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "raw_endium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "endium:endium_elytra"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "endium_elytra"
+    ]
+  ]
+}
