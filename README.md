@@ -1,4 +1,6 @@
 # anchikai's Endium
+![fabric](https://user-images.githubusercontent.com/95461402/160281952-8a96a46c-5496-4ca3-99f0-7d1fc35fd8c7.png)![both](https://user-images.githubusercontent.com/95461402/160281964-67e95f11-0878-4c8f-ade5-dfc486dfc74c.png)
+
 ![Endium](https://user-images.githubusercontent.com/95461402/160281232-1c4d1a46-9f4e-4abe-8230-c784846b560a.png)
 Endium is a new material which can be found generating as an ore in The End at y32 and below and can be found in loot chests in end cities.
 Endium is meant to be an alternative to Netherite, so it has its up and downsides compared to it.
