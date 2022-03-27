@@ -14,4 +14,8 @@ To craft an Emerald Infused Ender Pearl, just combine an Emerald and an Ender Pe
 Once you have an Endium Ingot, it can be combined with Diamond gear in a smithing table just like Netherite.
 You can also craft decoration blocks with either 9 Endium Ingots or 9 Raw Endium in a crafting table.
 
+  ![Endium Scrap](https://user-images.githubusercontent.com/95461402/160280872-9b2e09be-11bf-45f9-a6ae-5acad4e4638a.png)
+  ![Emerald Infused Ender Pearl](https://user-images.githubusercontent.com/95461402/160280933-b7bab82c-5986-4bef-99fa-6d3eb417b4bc.png)
+  ![Endium Ingot](https://user-images.githubusercontent.com/95461402/160280977-b2ce4a62-40f9-4c08-b480-abe503ad7353.png)
+
 Link to the mod on CurseForge: https://www.curseforge.com/minecraft/mc-mods/anchikais-endium
