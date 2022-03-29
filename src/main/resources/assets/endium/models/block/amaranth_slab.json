@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "endium:block/amaranth_planks",
+    "top": "endium:block/amaranth_planks",
+    "side": "endium:block/amaranth_planks"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "endium:amaranth_logs"
+    }
+  ],
+  "result": {
+    "item": "endium:amaranth_planks",
+    "count": 4
+  }
+}

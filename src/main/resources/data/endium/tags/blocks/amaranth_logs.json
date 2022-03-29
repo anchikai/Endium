@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "endium:amaranth_log",
+    "endium:amaranth_wood",
+    "endium:stripped_amaranth_log",
+    "endium:stripped_amaranth_wood"
+  ]
+}

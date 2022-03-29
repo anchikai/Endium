@@ -3,6 +3,9 @@
   "values": [
     "endium:endium_block",
     "endium:endium_ore",
-    "endium:raw_endium_block"
+    "endium:raw_endium_block",
+    "endium:cobbled_end_stone",
+    "endium:cobbled_end_stone_slab",
+    "endium:cobbled_end_stone_stairs"
   ]
 }

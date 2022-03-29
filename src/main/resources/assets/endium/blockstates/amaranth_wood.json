@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "endium:block/amaranth_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "endium:block/amaranth_wood"
+    },
+    "axis=z": {
+      "model": "endium:block/amaranth_wood",
+      "x": 90
+    }
+  }
+}

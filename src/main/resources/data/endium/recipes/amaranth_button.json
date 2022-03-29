@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "endium:amaranth_planks"
+    }
+  ],
+  "result": {
+    "item": "endium:amaranth_button"
+  }
+}

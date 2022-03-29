@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "endium:stripped_amaranth_log"
+    }
+  },
+  "result": {
+    "item": "endium:stripped_amaranth_wood",
+    "count": 3
+  }
+}

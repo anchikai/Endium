@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "endium:block/amaranth_slab"
+    },
+    "type=double": {
+      "model": "endium:block/amaranth_planks"
+    },
+    "type=top": {
+      "model": "endium:block/amaranth_slab_top"
+    }
+  }
+}

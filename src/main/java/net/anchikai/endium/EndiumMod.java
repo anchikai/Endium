@@ -2,6 +2,9 @@ package net.anchikai.endium;
 
 import net.anchikai.endium.block.ModBlocks;
 import net.anchikai.endium.item.ModItems;
+import net.anchikai.endium.util.ModRegistries;
+import net.anchikai.endium.world.feature.ModConfiguredFeatures;
+import net.anchikai.endium.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -45,6 +48,9 @@ public class EndiumMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		ModConfiguredFeatures.registerConfiguredFeatures();
+
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
 				new Identifier("endium", "endium_ore"), ENDIUM_ORE_CONFIGURED_FEATURE);
 		Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier("endium", "endium_ore"),
@@ -55,5 +61,7 @@ public class EndiumMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModRegistries.registerModStuffs();
+		ModWorldGen.generateModWorldGen();
 	}
 }

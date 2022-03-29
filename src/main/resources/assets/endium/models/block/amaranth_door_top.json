@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top",
+  "textures": {
+    "top": "endium:block/amaranth_door_top",
+    "bottom": "endium:block/amaranth_door_bottom"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "endium:cobbled_end_stone"
+  },
+  "result": "endium:cobbled_end_stone_slab",
+  "count": 2
+}

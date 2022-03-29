@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "endium:block/cobbled_end_stone_slab"
+    },
+    "type=double": {
+      "model": "endium:block/cobbled_end_stone_planks"
+    },
+    "type=top": {
+      "model": "endium:block/cobbled_end_stone_slab_top"
+    }
+  }
+}
