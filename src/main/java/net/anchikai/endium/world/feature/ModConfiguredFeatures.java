@@ -18,7 +18,7 @@ public class ModConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> AMARANTH_TREE =
             ConfiguredFeatures.register("amaranth_tree", Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(ModBlocks.AMARANTH_LOG),
-                    new BendingTrunkPlacer(6, 2, 0, 3, UniformIntProvider.create(1, 2)),
+                    new BendingTrunkPlacer(6, 2, 4, 3, UniformIntProvider.create(1, 2)),
                     BlockStateProvider.of(ModBlocks.AMARANTH_LEAVES),
                     new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
                     new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).build());
