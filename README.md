@@ -1,7 +1,7 @@
 # anchikai's Endium
 ![fabric](https://user-images.githubusercontent.com/95461402/160281952-8a96a46c-5496-4ca3-99f0-7d1fc35fd8c7.png)![both](https://user-images.githubusercontent.com/95461402/160281964-67e95f11-0878-4c8f-ade5-dfc486dfc74c.png)
 
-![Endium](https://user-images.githubusercontent.com/95461402/160281232-1c4d1a46-9f4e-4abe-8230-c784846b560a.png)
+![Endium](https://user-images.githubusercontent.com/95461402/160878258-f267c644-bbbc-46c3-b99c-a71e09b9490b.png)
 Endium is a new material which can be found generating as an ore in The End at y32 and below and can be found in loot chests in end cities.
 Endium is meant to be an alternative to Netherite, so it has its up and downsides compared to it.
 ### Endium Items
@@ -20,6 +20,12 @@ If you have at least 2 pieces of Endium armor on, you will not be affected by gr
 ### Amaranth & Cobbled End Stone
 Amaranth is a new wood type that can be found in the end very rarely. There is a 1/1250 chance for a chunk to contain an Amaranth tree, given if there is land for one to spawn on. Chorus Plants also has a 5% chance to drop an Amaranth Sapling instead of Chorus Fruit.
 After getting a wood pickaxe with your new Amaranth wood, you can then mine End Stone to get Cobbled End Stone, which can be used just like any other cobblestone.
+<details><summary>Amaranth Trees</summary>
+
+![Amaranth Trees](https://user-images.githubusercontent.com/95461402/160878556-34361e87-844c-4868-b218-75d8bc8e62df.png)
+
+</details>
+
 ### Crafting
 After obtaining raw Endium from Endium Ore, it can be smelted in a furnace or blast furnace to gain Endium Scrap. 4 Endium Scrap and 4 Emerald Infused Ender Pearls will grant 1 Endium Ingot.
 To craft an Emerald Infused Ender Pearl, just combine an Emerald and an Ender Pearl in a crafting table.
