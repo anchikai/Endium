@@ -22,3 +22,5 @@ You can also craft decoration blocks with either 9 Endium Ingots or 9 Raw Endium
   ![Endium Ingot](https://user-images.githubusercontent.com/95461402/160280977-b2ce4a62-40f9-4c08-b480-abe503ad7353.png)
 
 Link to the mod on CurseForge: https://www.curseforge.com/minecraft/mc-mods/anchikais-endium
+
+Link to the mod on Modrinth: https://modrinth.com/mod/endium
