@@ -2,6 +2,7 @@ package net.anchikai.endium.item;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -10,8 +11,10 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    ENDIUM("endium", 18, new int[]{3, 6, 8, 3}, 15,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.0f, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT));
+    ENDIUM("endium", 35, new int[]{3, 6, 8, 3}, 15,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.0f, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT)),
+    CHROMIUM("chromium", 34, new int[]{3, 6, 7, 3}, 11,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 4.0f, 0.2f, () -> Ingredient.ofItems(ModItems.CHROMIUM_INGOT));
 
     private static final int[] BASE_DURABILITY;
     private final String name;

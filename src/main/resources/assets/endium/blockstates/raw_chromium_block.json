@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "endium:block/raw_chromium_block" }
+  }
+}

@@ -3,8 +3,8 @@
   "id": "endium",
   "version": "${version}",
 
-  "name": "Endium",
-  "description": "This is a simple mod that adds an alternative to Netherite with its own unique properties.",
+  "name": "The Endium Expansion",
+  "description": "This is a mod that adds an alternative to Netherite with its own unique properties as well as more materials to The End.",
   "authors": [
     "anchikai."
   ],
@@ -30,9 +30,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "minecraft": "1.18.x",
+    "minecraft": "1.19.x",
     "java": ">=17"
   },
   "suggests": {

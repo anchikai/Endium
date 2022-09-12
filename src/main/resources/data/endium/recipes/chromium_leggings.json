@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "endium:chromium_ingot"
+    }
+  },
+  "result": {
+    "item": "endium:chromium_leggings"
+  }
+}

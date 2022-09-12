@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "chromium_ingot",
+  "ingredient": {
+    "item": "endium:raw_chromium"
+  },
+  "result": "endium:chromium_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

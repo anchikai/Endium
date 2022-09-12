@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "endium:block/amaranth_sign"
+    }
+  }
+}

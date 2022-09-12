@@ -22,8 +22,12 @@ public class EndiumModClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AMARANTH_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AMARANTH_SAPLING, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AMARANTH_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AMARANTH_TRAPDOOR, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LUNGWORT_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_LUNGWORT_FLOWER, RenderLayer.getCutout());
 
         FabricModelPredicateProviderRegistry.register(ModItems.ENDIUM_ELYTRA.asItem(),
                 new Identifier("broken"), (itemStack, clientWorld, livingEntity, seed) -> ModElytraItem.isUsable(itemStack) ? 0.0F : 1.0F);

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "endium:raw_chromium_block"
+    }
+  ],
+  "result": {
+    "item": "endium:raw_chromium",
+    "count": 9
+  }
+}

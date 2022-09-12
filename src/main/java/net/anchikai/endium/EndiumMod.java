@@ -32,7 +32,7 @@ import java.util.Arrays;
 public class EndiumMod implements ModInitializer {
 	public static final String MOD_ID = "endium";
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
-
+	// Endium Ore
 	private static final ConfiguredFeature<?, ?> ENDIUM_ORE_CONFIGURED_FEATURE = new ConfiguredFeature<>
 			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
@@ -45,12 +45,25 @@ public class EndiumMod implements ModInitializer {
 					CountPlacementModifier.of(2),  // Number of veins per chunk
 					SquarePlacementModifier.of(), // Spreading horizontally
 					HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(32)))); // Y Level
+	// Chromium Ore
+	private static final ConfiguredFeature<?, ?> CHROMIUM_ORE_CONFIGURED_FEATURE = new ConfiguredFeature<>
+			(Feature.ORE, new OreFeatureConfig(
+					new BlockMatchRuleTest(Blocks.END_STONE),
+					ModBlocks.CHROMIUM_ORE.getDefaultState(),
+					13)); // Vein size
+
+	public static PlacedFeature CHROMIUM_ORE_PLACED_FEATURE = new PlacedFeature(
+			RegistryEntry.of(CHROMIUM_ORE_CONFIGURED_FEATURE),
+			Arrays.asList(
+					CountPlacementModifier.of(6),  // Number of veins per chunk
+					SquarePlacementModifier.of(), // Spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(54)))); // Y Level
 
 	@Override
 	public void onInitialize() {
 
 		ModConfiguredFeatures.registerConfiguredFeatures();
-
+		// Endium Ore
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
 				new Identifier("endium", "endium_ore"), ENDIUM_ORE_CONFIGURED_FEATURE);
 		Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier("endium", "endium_ore"),
@@ -58,6 +71,14 @@ public class EndiumMod implements ModInitializer {
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES,
 				RegistryKey.of(Registry.PLACED_FEATURE_KEY,
 						new Identifier("endium", "endium_ore")));
+		// Chromium Ore
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
+				new Identifier("endium", "chromium_ore"), CHROMIUM_ORE_CONFIGURED_FEATURE);
+		Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier("endium", "chromium_ore"),
+				CHROMIUM_ORE_PLACED_FEATURE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES,
+				RegistryKey.of(Registry.PLACED_FEATURE_KEY,
+						new Identifier("endium", "chromium_ore")));
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();

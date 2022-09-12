@@ -15,6 +15,7 @@ import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
 import java.util.List;
 
 public class ModConfiguredFeatures {
+    // Amaranth Tree
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> AMARANTH_TREE =
             ConfiguredFeatures.register("amaranth_tree", Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(ModBlocks.AMARANTH_LOG),
@@ -31,6 +32,12 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("amaranth_spawn", Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfig(List.of(new RandomFeatureEntry(AMARANTH_CHECKED, 0.5f)),
                             AMARANTH_CHECKED));
+
+    // Lungwort Flower
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> LUNGWORT_FLOWER =
+            ConfiguredFeatures.register("lungwort_flower", Feature.FLOWER,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.LUNGWORT_FLOWER)))));
 
     public static void registerConfiguredFeatures() {
         System.out.println("Registering ModConfiguredFeatures for " + EndiumMod.MOD_ID);

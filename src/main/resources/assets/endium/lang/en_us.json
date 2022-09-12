@@ -17,7 +17,28 @@
   "block.endium.endium_block": "Block of Endium",
   "block.endium.endium_ore": "Endium Ore",
   "block.endium.raw_endium_block": "Block of Raw Endium",
+
+  "item.endium.chromium_axe": "Chromium Axe",
+  "item.endium.chromium_boots": "Chromium Boots",
+  "item.endium.chromium_chestplate": "Chromium Chestplate",
+  "item.endium.chromium_helmet": "Chromium Helmet",
+  "item.endium.chromium_hoe": "Chromium Hoe",
+  "item.endium.chromium_ingot": "Chromium Ingot",
+  "item.endium.chromium_leggings": "Chromium Leggings",
+  "item.endium.chromium_pickaxe": "Chromium Pickaxe",
+  "item.endium.chromium_shovel": "Chromium Shovel",
+  "item.endium.chromium_sword": "Chromium Sword",
+  "item.endium.raw_chromium": "Raw Chromium",
+
+  "block.endium.chromium_block": "Block of Chromium",
+  "block.endium.chromium_ore": "Chromium Ore",
+  "block.endium.raw_chromium_block": "Block of Raw Chromium",
+
   "block.endium.cobbled_end_stone": "Cobbled End Stone",
+  "block.endium.cobbled_end_stone_wall": "Cobbled End Stone Wall",
+  "block.endium.cobbled_end_stone_slab": "Cobbled End Stone Slab",
+  "block.endium.cobbled_end_stone_stairs": "Cobbled End Stone Stairs",
+
   "block.endium.amaranth_log": "Amaranth Log",
   "block.endium.amaranth_wood": "Amaranth Wood",
   "block.endium.stripped_amaranth_log": "Stripped Amaranth Log",
@@ -25,7 +46,8 @@
   "block.endium.amaranth_planks": "Amaranth Planks",
   "block.endium.amaranth_leaves": "Amaranth Leaves",
   "block.endium.amaranth_sapling": "Amaranth Sapling",
-
+  "block.endium.amaranth_sign": "Amaranth Sign",
+  "block.endium.amaranth_wall_sign": "Amaranth Sign",
   "block.endium.amaranth_button": "Amaranth Button",
   "block.endium.amaranth_pressure_plate": "Amaranth Pressure Plate",
   "block.endium.amaranth_fence": "Amaranth Fence",
@@ -34,9 +56,9 @@
   "block.endium.amaranth_trapdoor": "Amaranth Trapdoor",
   "block.endium.amaranth_slab": "Amaranth Slab",
   "block.endium.amaranth_stairs": "Amaranth Stairs",
-  "block.endium.cobbled_end_stone_wall": "Cobbled End Stone Wall",
-  "block.endium.cobbled_end_stone_slab": "Cobbled End Stone Slab",
-  "block.endium.cobbled_end_stone_stairs": "Cobbled End Stone Stairs",
 
-  "itemGroup.endium.endium": "Endium"
+  "block.endium.lungwort_flower": "Lungwort",
+  "block.endium.potted_lungwort_flower": "Potted Lungwort",
+
+  "itemGroup.endium.endium": "The Endium Expansion"
 }

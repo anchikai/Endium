@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "endium:raw_chromium"
+    }
+  },
+  "result": {
+    "item": "endium:raw_chromium_block"
+  }
+}

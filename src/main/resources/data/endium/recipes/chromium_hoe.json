@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "endium:chromium_ingot"
+    }
+  },
+  "result": {
+    "item": "endium:chromium_hoe"
+  }
+}

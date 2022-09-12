@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-
+    "endium:chromium_block",
+    "endium:chromium_ore",
+    "endium:raw_chromium_block"
   ]
 }
