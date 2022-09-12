@@ -1,13 +1,11 @@
 package net.anchikai.endium.item;
 
 import net.anchikai.endium.EndiumMod;
+import net.anchikai.endium.block.ModBlocks;
 import net.anchikai.endium.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
@@ -87,6 +85,11 @@ public class ModItems {
     public static final Item CHROMIUM_BOOTS = registerItem("chromium_boots",
             new ArmorItem(ModArmorMaterials.CHROMIUM, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroup.ENDIUM)));
+
+    // Other
+    public static final Item AMARANTH_SIGN = registerItem("amaranth_sign",
+            new SignItem(new FabricItemSettings().group(ModItemGroup.ENDIUM).maxCount(16),
+                    ModBlocks.AMARANTH_SIGN_BLOCK, ModBlocks.AMARANTH_WALL_SIGN_BLOCK));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EndiumMod.MOD_ID, name), item);

@@ -2,6 +2,7 @@ package net.anchikai.endium.block;
 
 import net.anchikai.endium.EndiumMod;
 import net.anchikai.endium.block.custom.*;
+import net.anchikai.endium.block.entity.ModSignTypes;
 import net.anchikai.endium.item.ModItemGroup;
 import net.anchikai.endium.world.feature.tree.AmaranthSaplingGenorator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -94,8 +95,8 @@ public class ModBlocks {
             new ModStairsBlock(ModBlocks.AMARANTH_PLANKS.getDefaultState(), FabricBlockSettings.copy(Blocks.OAK_STAIRS)),
                 ModItemGroup.ENDIUM);
     public static final Block AMARANTH_DOOR = registerBlock("amaranth_door",
-            new ModDoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR).nonOpaque()),
-                ModItemGroup.ENDIUM);
+            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .strength(4.0f).requiresTool().sounds(BlockSoundGroup.WOOD).nonOpaque()), ModItemGroup.ENDIUM);
     public static final Block AMARANTH_TRAPDOOR = registerBlock("amaranth_trapdoor",
             new ModTrapDoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR).nonOpaque()),
                 ModItemGroup.ENDIUM);
@@ -105,9 +106,10 @@ public class ModBlocks {
     public static final Block AMARANTH_SAPLING = registerBlock("amaranth_sapling",
             new ModSaplingBlock(new AmaranthSaplingGenorator(),
                     FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroup.ENDIUM);
-    public static final Block AMARANTH_SIGN = registerBlock("amaranth_sign",
-            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), SignType.CRIMSON),
-                ModItemGroup.ENDIUM);
+    public static final Block AMARANTH_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("amaranth_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.AMARANTH), ModItemGroup.ENDIUM);
+    public static final Block AMARANTH_SIGN_BLOCK = registerBlockWithoutBlockItem("amaranth_sign",
+            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.AMARANTH), ModItemGroup.ENDIUM);
     // Lungwort Flower
     public static final Block LUNGWORT_FLOWER = registerBlock("lungwort_flower",
             new ModFlowerBlock(StatusEffects.LEVITATION, 12,

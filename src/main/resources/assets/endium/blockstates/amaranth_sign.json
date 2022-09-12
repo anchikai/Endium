@@ -1,7 +1,5 @@
 {
   "variants": {
-    "": {
-      "model": "endium:block/amaranth_sign"
-    }
+    "": { "model": "endium:block/amaranth_sign" }
   }
 }
