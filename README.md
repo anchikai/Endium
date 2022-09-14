@@ -27,15 +27,15 @@ After getting a wood pickaxe with your new Amaranth wood, you can then mine End 
 </details>
 
 ### Crafting
-After obtaining raw Endium from Endium Ore, it can be smelted in a furnace or blast furnace to gain Endium Scrap. 4 Endium Scrap and 4 Emerald Infused Ender Pearls will grant 1 Endium Ingot.
-To craft an Emerald Infused Ender Pearl, just combine an Emerald and an Ender Pearl in a crafting table.
+After obtaining raw Endium from Endium Ore, it can be smelted in a furnace or blast furnace to gain Endium Scrap. 4 Endium Scrap and 4 Echopearls will grant 1 Endium Ingot.
+To craft an Echopearl, just combine an Echo Shard and an Ender Pearl in a crafting table.
 Once you have an Endium Ingot, it can be combined with Diamond gear in a smithing table just like Netherite.
 You can also craft decoration blocks with either 9 Endium Ingots or 9 Raw Endium in a crafting table.
 Finally, you can craft anything like fences, slabs, stairs, buttons, and so on with Amaranth and walls, slabs, and stairs with Cobbled End Stone.
 <details><summary>Crafting Recipes</summary>
 
 ![Endium Scrap](https://user-images.githubusercontent.com/95461402/160280872-9b2e09be-11bf-45f9-a6ae-5acad4e4638a.png)
-![Emerald Infused Ender Pearl](https://user-images.githubusercontent.com/95461402/160280933-b7bab82c-5986-4bef-99fa-6d3eb417b4bc.png)
+![Echopearl](https://user-images.githubusercontent.com/95461402/160280933-b7bab82c-5986-4bef-99fa-6d3eb417b4bc.png)
 ![Endium Ingot](https://user-images.githubusercontent.com/95461402/160280977-b2ce4a62-40f9-4c08-b480-abe503ad7353.png)
 
 </details>

@@ -18,7 +18,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.ENDIUM)));
     public static final Item ENDIUM_SCRAP = registerItem("endium_scrap",
             new Item(new FabricItemSettings().group(ModItemGroup.ENDIUM)));
-    public static final Item EMERALD_INFUSED_ENDER_PEARL = registerItem("emerald_infused_ender_pearl",
+    public static final Item ECHOPEARL = registerItem("echopearl",
             new ModEnderPearlItem(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENDIUM)));
     // Endium Tools
     public static final Item ENDIUM_SWORD = registerItem("endium_sword",

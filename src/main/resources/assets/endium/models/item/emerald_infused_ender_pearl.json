@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "endium:item/emerald_infused_ender_pearl"
-  }
-}
