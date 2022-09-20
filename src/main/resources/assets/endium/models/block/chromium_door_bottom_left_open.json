@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "particle": "endium:block/chromium_block",
+    "bottom": "endium:block/chromium_door_bottom",
+    "top": "endium:block/chromium_door_top"
+  }
+}

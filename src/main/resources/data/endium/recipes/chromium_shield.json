@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "endium:amaranth_planks"
+    },
+    "c": {
+      "item": "endium:chromium_ingot"
+    }
+  },
+  "pattern": [
+    "AcA",
+    "AAA",
+    " A "
+  ],
+  "result": {
+    "item": "endium:chromium_shield"
+  }
+}

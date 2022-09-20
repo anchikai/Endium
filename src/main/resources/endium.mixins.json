@@ -6,6 +6,8 @@
   "mixins": [
     "BlockEntityTypeMixin",
     "MobEntityMixin",
+    "ServerPlayNetworkHandlerMixin",
+    "RendererMixin",
     "SignTypeAccessor",
     "EndiumDropMixin",
     "EndiumDropSaveMixin"

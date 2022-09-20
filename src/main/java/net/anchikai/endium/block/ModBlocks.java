@@ -42,10 +42,20 @@ public class ModBlocks {
                 ModItemGroup.ENDIUM);
     public static final Block CHROMIUM_ORE = registerBlock("chromium_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(5.0f, 15.0f).requiresTool().mapColor(MapColor.PALE_YELLOW),
-                    UniformIntProvider.create(1, 1)), ModItemGroup.ENDIUM);
+                UniformIntProvider.create(1, 1)), ModItemGroup.ENDIUM);
     public static final Block RAW_CHROMIUM_BLOCK = registerBlock("raw_chromium_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(8.0f, 15.0f).requiresTool().mapColor(MapColor.IRON_GRAY).sounds(BlockSoundGroup.METAL)),
-            ModItemGroup.ENDIUM);
+                ModItemGroup.ENDIUM);
+    // More Chromium
+    public static final Block CHROMIUM_DOOR = registerBlock("chromium_door",
+            new DoorBlock(FabricBlockSettings.copy(Blocks.IRON_DOOR).nonOpaque()),
+                ModItemGroup.ENDIUM);
+    public static final Block CHROMIUM_TRAPDOOR = registerBlock("chromium_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()),
+                ModItemGroup.ENDIUM);
+    public static final Block CHROMIUM_ANVIL = registerBlock("chromium_anvil",
+            new ModAnvilBlock(FabricBlockSettings.of(Material.REPAIR_STATION).strength(5.0f, 1200.0f).requiresTool().mapColor(MapColor.IRON_GRAY).sounds(BlockSoundGroup.ANVIL)),
+                ModItemGroup.ENDIUM);
     // Cobbled End Stone
     public static final Block COBBLED_END_STONE = registerBlock("cobbled_end_stone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f, 9.0f).requiresTool().mapColor(MapColor.PALE_YELLOW)),
@@ -95,10 +105,10 @@ public class ModBlocks {
             new ModStairsBlock(ModBlocks.AMARANTH_PLANKS.getDefaultState(), FabricBlockSettings.copy(Blocks.OAK_STAIRS)),
                 ModItemGroup.ENDIUM);
     public static final Block AMARANTH_DOOR = registerBlock("amaranth_door",
-            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD)
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD)
                     .strength(4.0f).requiresTool().sounds(BlockSoundGroup.WOOD).nonOpaque()), ModItemGroup.ENDIUM);
     public static final Block AMARANTH_TRAPDOOR = registerBlock("amaranth_trapdoor",
-            new ModTrapDoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR).nonOpaque()),
+            new TrapdoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR).nonOpaque()),
                 ModItemGroup.ENDIUM);
     public static final Block AMARANTH_LEAVES = registerBlock("amaranth_leaves",
             new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()),

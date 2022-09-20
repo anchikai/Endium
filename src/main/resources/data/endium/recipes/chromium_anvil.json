@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "item": "endium:chromium_block"
+    },
+    "i": {
+      "item": "endium:chromium_ingot"
+    }
+  },
+  "pattern": [
+    "III",
+    " i ",
+    "iii"
+  ],
+  "result": {
+    "item": "endium:chromium_anvil"
+  }
+}

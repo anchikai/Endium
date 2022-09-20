@@ -72,6 +72,10 @@ public class ModItems {
     public static final Item CHROMIUM_PICKAXE = registerItem("chromium_pickaxe",
             new ModPickaxeItem(ModToolMaterials.CHROMIUM, 1, -2.8f,
                     new FabricItemSettings().group(ModItemGroup.ENDIUM)));
+    public static final Item CHROMIUM_SHIELD =
+            new ModShieldItem(new FabricItemSettings().maxDamage(1867).group(ModItemGroup.ENDIUM), 100, 16, ModItems.CHROMIUM_INGOT);
+
+
     // Chromium Armor
     public static final Item CHROMIUM_HELMET = registerItem("chromium_helmet",
             new ArmorItem(ModArmorMaterials.CHROMIUM, EquipmentSlot.HEAD,

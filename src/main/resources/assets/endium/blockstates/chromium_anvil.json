@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "endium:block/chromium_anvil",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "endium:block/chromium_anvil",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "endium:block/chromium_anvil"
+    },
+    "facing=west": {
+      "model": "endium:block/chromium_anvil",
+      "y": 90
+    }
+  }
+}

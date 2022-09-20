@@ -2,6 +2,7 @@ package net.anchikai.endium;
 
 import net.anchikai.endium.block.ModBlocks;
 import net.anchikai.endium.item.ModItems;
+import net.anchikai.endium.screen.EndiumModScreenHandlers;
 import net.anchikai.endium.util.ModRegistries;
 import net.anchikai.endium.world.feature.ModConfiguredFeatures;
 import net.anchikai.endium.world.gen.ModWorldGen;
@@ -80,9 +81,15 @@ public class EndiumMod implements ModInitializer {
 				RegistryKey.of(Registry.PLACED_FEATURE_KEY,
 						new Identifier("endium", "chromium_ore")));
 
+		Registry.register(Registry.ITEM, new Identifier("endium", "chromium_shield"), ModItems.CHROMIUM_SHIELD);
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModRegistries.registerModStuffs();
 		ModWorldGen.generateModWorldGen();
+		EndiumModScreenHandlers.init();
+	}
+	public static Identifier id(String id) {
+		return new Identifier(MOD_ID, id);
 	}
 }
