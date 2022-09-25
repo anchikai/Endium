@@ -1,0 +1,12 @@
+{
+  "map": [
+    {
+      "predicate": {
+        "materialPredicate": {
+          "texture": "endium:textures/entity/endium_trident.png"
+        }
+      },
+      "material": "canvas:emissive_transform"
+    }
+  ]
+}

@@ -13,7 +13,12 @@
     "EndiumDropSaveMixin",
     "ChestBoatDropsMixin",
     "BoatTypeMixin",
-    "BoatDropsMixin"
+    "BoatDropsMixin",
+    "TridentEntityAccessor",
+    "TridentRiptideFeatureRendererMixin",
+    "EntityMixin",
+    "LivingEntityMixin",
+    "InGameOverlayRendererMixin"
   ],
   "client": [
 
