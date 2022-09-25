@@ -7,6 +7,7 @@
     "endium:chromium_block",
     "endium:chromium_ore",
     "endium:raw_chromium_block",
+    "endium:chromium_anvil",
     "endium:cobbled_end_stone",
     "endium:cobbled_end_stone_slab",
     "endium:cobbled_end_stone_stairs"

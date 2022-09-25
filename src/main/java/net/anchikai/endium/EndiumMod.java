@@ -83,6 +83,9 @@ public class EndiumMod implements ModInitializer {
 
 		Registry.register(Registry.ITEM, new Identifier("endium", "chromium_shield"), ModItems.CHROMIUM_SHIELD);
 
+//		Registry.register(Registry.ITEM, new Identifier(EndiumMod.MOD_ID, "amaranth_boat"), ModItems.AMARANTH_BOAT);
+//		Registry.register(Registry.ITEM, new Identifier(EndiumMod.MOD_ID, "amaranth_chest_boat"), ModItems.AMARANTH_CHEST_BOAT);
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModRegistries.registerModStuffs();

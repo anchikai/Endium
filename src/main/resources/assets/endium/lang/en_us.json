@@ -78,6 +78,10 @@
   "block.endium.amaranth_trapdoor": "Amaranth Trapdoor",
   "block.endium.amaranth_slab": "Amaranth Slab",
   "block.endium.amaranth_stairs": "Amaranth Stairs",
+  "item.endium.amaranth_boat": "Amaranth Boat",
+  "item.endium.amaranth_chest_boat": "Amaranth Boat with Chest",
+  "entity.endium.amaranth_boat": "Amaranth Boat",
+  "entity.endium.amaranth_chest_boat": "Amaranth Boat with Chest",
 
   "block.endium.lungwort_flower": "Lungwort",
   "block.endium.potted_lungwort_flower": "Potted Lungwort",

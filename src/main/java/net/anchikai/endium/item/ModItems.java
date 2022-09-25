@@ -3,14 +3,24 @@ package net.anchikai.endium.item;
 import net.anchikai.endium.EndiumMod;
 import net.anchikai.endium.block.ModBlocks;
 import net.anchikai.endium.item.custom.*;
+import net.anchikai.endium.util.CustomBoatType;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
+    // Amaranth Items
+    public static final Item AMARANTH_SIGN = registerItem("amaranth_sign",
+            new SignItem(new FabricItemSettings().group(ModItemGroup.ENDIUM).maxCount(16),
+                    ModBlocks.AMARANTH_SIGN_BLOCK, ModBlocks.AMARANTH_WALL_SIGN_BLOCK));
+    public static final Item AMARANTH_BOAT = registerItem("amaranth_boat",
+            new BoatItem(false, CustomBoatType.AMARANTH, (new FabricItemSettings()).maxCount(1).group(ModItemGroup.ENDIUM)));
+    public static final Item AMARANTH_CHEST_BOAT = registerItem("amaranth_chest_boat",
+            new BoatItem(true, CustomBoatType.AMARANTH, (new FabricItemSettings()).maxCount(1).group(ModItemGroup.ENDIUM)));
     // Endium Items
     public static final Item ENDIUM_INGOT = registerItem("endium_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.ENDIUM)));
@@ -89,11 +99,6 @@ public class ModItems {
     public static final Item CHROMIUM_BOOTS = registerItem("chromium_boots",
             new ArmorItem(ModArmorMaterials.CHROMIUM, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroup.ENDIUM)));
-
-    // Other
-    public static final Item AMARANTH_SIGN = registerItem("amaranth_sign",
-            new SignItem(new FabricItemSettings().group(ModItemGroup.ENDIUM).maxCount(16),
-                    ModBlocks.AMARANTH_SIGN_BLOCK, ModBlocks.AMARANTH_WALL_SIGN_BLOCK));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EndiumMod.MOD_ID, name), item);

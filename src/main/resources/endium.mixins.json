@@ -10,7 +10,10 @@
     "RendererMixin",
     "SignTypeAccessor",
     "EndiumDropMixin",
-    "EndiumDropSaveMixin"
+    "EndiumDropSaveMixin",
+    "ChestBoatDropsMixin",
+    "BoatTypeMixin",
+    "BoatDropsMixin"
   ],
   "client": [
 
