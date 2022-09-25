@@ -17,9 +17,7 @@ public class ModShieldItem extends FabricBannerShieldItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
-                if(isChromiumShield(player)) {
-                    player.setNoGravity(player.isBlocking());
-                }
+                player.setNoGravity(isChromiumShield(player) && player.isBlocking());
             }
         }
 
