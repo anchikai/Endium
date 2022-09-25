@@ -15,6 +15,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.MathHelper;
@@ -40,6 +41,7 @@ public class ModTridentItem extends TridentItem {
                         if (riptideLevel == 0) {
                             EndiumTridentEntity tridentEntity = new EndiumTridentEntity(world, playerEntity, stack);
                             tridentEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0F, 2.5F + riptideLevel * 0.5F, 1.0F);
+                            tridentEntity.setCustomName(Text.of("Endium Trident"));
                             if (playerEntity.getAbilities().creativeMode) {
                                 tridentEntity.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
                             }
