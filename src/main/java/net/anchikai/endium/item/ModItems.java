@@ -47,7 +47,7 @@ public class ModItems {
             new ModPickaxeItem(ModToolMaterials.ENDIUM, 1, -2.8f,
                     new FabricItemSettings().group(ModItemGroup.ENDIUM)));
     public static final Item ENDIUM_TRIDENT = registerItem("endium_trident",
-            new ModTridentItem(new FabricItemSettings().maxDamage(288).group(ModItemGroup.ENDIUM)));
+            new ModTridentItem(new Item.Settings().maxDamage(388).group(ModItemGroup.ENDIUM)));
     // Endium Armor
     public static final Item ENDIUM_HELMET = registerItem("endium_helmet",
             new ModArmorItem(ModArmorMaterials.ENDIUM, EquipmentSlot.HEAD,
