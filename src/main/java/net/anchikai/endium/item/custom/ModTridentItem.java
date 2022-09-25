@@ -82,6 +82,13 @@ public class ModTridentItem extends TridentItem {
 
                         world.playSoundFromEntity(null, playerEntity, soundEvent3, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
+                        ItemStack currenthand = ((PlayerEntity) user).getInventory().getMainHandStack();
+                        ItemStack offhand = ((PlayerEntity) user).getInventory().offHand.get(0);
+                        if (currenthand.isOf(ModItems.CHROMIUM_INGOT)) {
+                            currenthand.decrement(1);
+                        } else if (offhand.isOf(ModItems.CHROMIUM_INGOT)) {
+                            offhand.decrement(1);
+                        }
                     }
 
                 }
@@ -95,13 +102,6 @@ public class ModTridentItem extends TridentItem {
         if (itemStack.getDamage() >= itemStack.getMaxDamage() - 1) {
             return TypedActionResult.fail(itemStack);
         } else if (EnchantmentHelper.getRiptide(itemStack) > 0 && !(user.isTouchingWaterOrRain() || isHoldingChromiumIngot(user))) {
-            ItemStack currenthand = user.getInventory().getMainHandStack();
-            ItemStack offhand = user.getInventory().offHand.get(0);
-            if (currenthand.isOf(ModItems.CHROMIUM_INGOT)) {
-                currenthand.decrement(1);
-            } else if (offhand.isOf(ModItems.CHROMIUM_INGOT)) {
-                offhand.decrement(1);
-            }
             return TypedActionResult.fail(itemStack);
         } else {
             user.setCurrentHand(hand);
