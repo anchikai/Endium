@@ -12,12 +12,13 @@
     "EndiumDropMixin",
     "EndiumDropSaveMixin",
     "ChestBoatDropsMixin",
-    "BoatTypeMixin",
+
     "BoatDropsMixin"
   ],
   "client": [
     "ItemRendererAccessor",
     "ItemRendererMixin",
+    "ModelLoaderMixin",
     "TridentEntityRendererMixin"
   ],
   "injectors": {

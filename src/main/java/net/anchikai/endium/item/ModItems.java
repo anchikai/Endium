@@ -18,9 +18,9 @@ public class ModItems {
             new SignItem(new FabricItemSettings().group(ModItemGroup.ENDIUM).maxCount(16),
                     ModBlocks.AMARANTH_SIGN_BLOCK, ModBlocks.AMARANTH_WALL_SIGN_BLOCK));
     public static final Item AMARANTH_BOAT = registerItem("amaranth_boat",
-            new BoatItem(false, CustomBoatType.AMARANTH, (new FabricItemSettings()).maxCount(1).group(ModItemGroup.ENDIUM)));
+            new BoatItem(false, BoatEntity.Type.OAK, (new FabricItemSettings()).maxCount(1).group(ModItemGroup.ENDIUM)));
     public static final Item AMARANTH_CHEST_BOAT = registerItem("amaranth_chest_boat",
-            new BoatItem(true, CustomBoatType.AMARANTH, (new FabricItemSettings()).maxCount(1).group(ModItemGroup.ENDIUM)));
+            new BoatItem(true, BoatEntity.Type.OAK, (new FabricItemSettings()).maxCount(1).group(ModItemGroup.ENDIUM)));
     // Endium Items
     public static final Item ENDIUM_INGOT = registerItem("endium_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.ENDIUM)));

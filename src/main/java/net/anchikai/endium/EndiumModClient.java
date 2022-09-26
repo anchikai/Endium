@@ -1,26 +1,29 @@
 package net.anchikai.endium;
 
 import net.anchikai.endium.block.ModBlocks;
+import net.anchikai.endium.client.render.entity.feature.ModElytraFeatureRenderer;
 import net.anchikai.endium.item.ModItems;
 import net.anchikai.endium.item.custom.ModElytraItem;
-import net.anchikai.endium.client.render.entity.feature.ModElytraFeatureRenderer;
 import net.anchikai.endium.misc.EndiumTag;
 import net.anchikai.endium.screen.EndiumModScreenHandlers;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRenderEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.render.entity.model.ShieldEntityModel;
 import net.minecraft.client.texture.SpriteAtlasTexture;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.resource.ResourceType;
 import net.minecraft.util.Identifier;
 
 public class EndiumModClient implements ClientModInitializer {
@@ -58,5 +61,4 @@ public class EndiumModClient implements ClientModInitializer {
     private static boolean allowCapeRender(AbstractClientPlayerEntity player) {
         return !(player.getEquippedStack(EquipmentSlot.CHEST).isIn(EndiumTag.ENDIUM_ELYTRA));
     }
-
 }
