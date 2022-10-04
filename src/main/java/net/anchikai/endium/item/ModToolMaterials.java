@@ -9,7 +9,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    ENDIUM(MiningLevels.DIAMOND, 1796, 18.0f, 5.0f, 15, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT)),
+    ENDIUM(MiningLevels.DIAMOND, 1796, 39.0f, 5.0f, 15, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT)),
     CHROMIUM(MiningLevels.IRON, 1639, 8.0f, 2.5f, 16, () -> Ingredient.ofItems(ModItems.CHROMIUM_INGOT));
 
     private final int miningLevel;

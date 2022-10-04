@@ -51,12 +51,12 @@ public class EndiumMod implements ModInitializer {
 			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
 					ModBlocks.CHROMIUM_ORE.getDefaultState(),
-					13)); // Vein size
+					8)); // Vein size
 
 	public static PlacedFeature CHROMIUM_ORE_PLACED_FEATURE = new PlacedFeature(
 			RegistryEntry.of(CHROMIUM_ORE_CONFIGURED_FEATURE),
 			Arrays.asList(
-					CountPlacementModifier.of(6),  // Number of veins per chunk
+					CountPlacementModifier.of(2),  // Number of veins per chunk
 					SquarePlacementModifier.of(), // Spreading horizontally
 					HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(54)))); // Y Level
 
