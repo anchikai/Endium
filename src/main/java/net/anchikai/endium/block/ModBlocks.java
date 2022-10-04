@@ -56,7 +56,7 @@ public class ModBlocks {
     public static final Block CHROMIUM_ANVIL = registerBlock("chromium_anvil",
             new ModAnvilBlock(FabricBlockSettings.of(Material.REPAIR_STATION).strength(5.0f, 1200.0f).requiresTool().mapColor(MapColor.IRON_GRAY).sounds(BlockSoundGroup.ANVIL)),
                 ModItemGroup.ENDIUM);
-    // Cobbled End Stone
+    // End Blocks
     public static final Block COBBLED_END_STONE = registerBlock("cobbled_end_stone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f, 9.0f).requiresTool().mapColor(MapColor.PALE_YELLOW)),
                 ModItemGroup.ENDIUM);
@@ -69,6 +69,9 @@ public class ModBlocks {
     public static final Block COBBLED_END_STONE_STAIRS = registerBlock("cobbled_end_stone_stairs",
             new ModStairsBlock(ModBlocks.COBBLED_END_STONE.getDefaultState(), FabricBlockSettings.copy(Blocks.COBBLESTONE_STAIRS)),
                 ModItemGroup.ENDIUM);
+    public static final Block END_DUST = registerBlock("end_dust",
+            new ModSandBlock(14406560, FabricBlockSettings.of(Material.AGGREGATE, MapColor.PALE_YELLOW).strength(0.6f).sounds(BlockSoundGroup.SAND)),
+            ModItemGroup.ENDIUM);
     // Amaranth Wood
     public static final Block AMARANTH_LOG = registerBlock("amaranth_log",
             new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).mapColor(MapColor.PALE_PURPLE)),
@@ -127,7 +130,6 @@ public class ModBlocks {
     public static final Block POTTED_LUNGWORT_FLOWER = registerBlockWithoutBlockItem("potted_lungwort_flower",
             new FlowerPotBlock(ModBlocks.LUNGWORT_FLOWER,
                     FabricBlockSettings.copy(Blocks.POTTED_ALLIUM).nonOpaque()), ModItemGroup.ENDIUM);
-
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
         registerBlockItem(name, block, group, tooltipKey);
