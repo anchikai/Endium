@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "endium:block/end_dust" }
+  }
+}

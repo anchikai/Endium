@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "endium:end_dust"
+    }
+  },
+  "result": {
+    "item": "endium:cobbled_end_stone"
+  }
+}

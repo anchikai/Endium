@@ -4,10 +4,10 @@
       "model": "endium:block/cobbled_end_stone_slab"
     },
     "type=double": {
-      "model": "endium:block/cobbled_end_stone_planks"
+      "model": "endium:block/cobbled_end_stone"
     },
     "type=top": {
-      "model": "endium:block/cobbled_end_stone_slab_top"
+      "model": "endium:block/cobbled_end_stone_top"
     }
   }
 }
