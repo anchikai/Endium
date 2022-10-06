@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "particle": "endium:block/end_ice",
+    "all": "endium:block/end_ice"
+  }
+}

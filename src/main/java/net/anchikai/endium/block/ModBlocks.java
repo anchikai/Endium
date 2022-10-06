@@ -70,7 +70,10 @@ public class ModBlocks {
             new ModStairsBlock(ModBlocks.COBBLED_END_STONE.getDefaultState(), FabricBlockSettings.copy(Blocks.COBBLESTONE_STAIRS)),
                 ModItemGroup.ENDIUM);
     public static final Block END_DUST = registerBlock("end_dust",
-            new SandBlock(14406560, FabricBlockSettings.copy(Blocks.SAND).strength(0.8f)),
+            new ModDustBlock(14406560, FabricBlockSettings.copy(Blocks.SAND).strength(0.8f).dynamicBounds()),
+                ModItemGroup.ENDIUM);
+    public static final Block END_ICE = registerBlock("end_ice",
+            new TransparentBlock(FabricBlockSettings.copy(Blocks.BLUE_ICE).slipperiness(0.998f)),
                 ModItemGroup.ENDIUM);
     // Amaranth Wood
     public static final Block AMARANTH_LOG = registerBlock("amaranth_log",

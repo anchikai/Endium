@@ -10,6 +10,7 @@
     "endium:chromium_anvil",
     "endium:cobbled_end_stone",
     "endium:cobbled_end_stone_slab",
-    "endium:cobbled_end_stone_stairs"
+    "endium:cobbled_end_stone_stairs",
+    "endium:end_ice"
   ]
 }

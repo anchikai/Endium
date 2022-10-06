@@ -88,6 +88,10 @@
   "block.endium.potted_lungwort_flower": "Potted Lungwort",
 
   "block.endium.end_dust": "End Dust",
+  "block.endium.end_ice": "End Ice",
+
+  "biome.endium.melancho": "Melancho",
+  "biome.endium.dusty_wastes": "Dusty Wastes",
 
   "itemGroup.endium.endium": "The Endium Expansion"
 }
