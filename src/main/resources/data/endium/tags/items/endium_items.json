@@ -1,4 +1,5 @@
 {
   "replace": false,
-  "values": ["endium:endium_ingot", "endium:raw_endium", "endium:endium_scrap", "endium:endium_sword", "endium:endium_axe", "endium:endium_hoe", "endium:endium_shovel", "endium:endium_pickaxe", "endium:endium_helmet", "endium:endium_chestplate", "endium:endium_leggings", "endium:endium_boots", "endium:endium_elytra", "endium:endium_block", "endium:endium_ore", "endium:raw_endium_block"]
+  "values": ["endium:endium_ingot", "endium:raw_endium", "endium:endium_scrap", "endium:endium_sword", "endium:endium_axe", "endium:endium_hoe", "endium:endium_shovel", "endium:endium_pickaxe", "endium:endium_helmet", "endium:endium_chestplate", "endium:endium_leggings", "endium:endium_boots", "endium:endium_elytra", "endium:endium_block", "endium:endium_ore", "endium:raw_endium_block",
+             "endium:culminite_ingot", "endium:culminite_sword", "endium:culminite_axe", "endium:culminite_hoe", "endium:culminite_shovel", "endium:culminite_pickaxe", "endium:culminite_helmet", "endium:culminite_chestplate", "endium:culminite_leggings", "endium:culminite_boots", "endium:culminite_elytra", "endium:culminite_block"]
 }

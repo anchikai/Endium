@@ -86,8 +86,6 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.ENDIUM)));
     public static final Item CHROMIUM_SHIELD =
             new ModShieldItem(new FabricItemSettings().maxDamage(1867).group(ModItemGroup.ENDIUM), 100, 16, ModItems.CHROMIUM_INGOT);
-
-
     // Chromium Armor
     public static final Item CHROMIUM_HELMET = registerItem("chromium_helmet",
             new ArmorItem(ModArmorMaterials.CHROMIUM, EquipmentSlot.HEAD,
@@ -101,12 +99,46 @@ public class ModItems {
     public static final Item CHROMIUM_BOOTS = registerItem("chromium_boots",
             new ArmorItem(ModArmorMaterials.CHROMIUM, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroup.ENDIUM)));
+    // Culminite Items
+    public static final Item CULMINITE_INGOT = registerItem("culminite_ingot",
+            new Item(new FabricItemSettings().fireproof().group(ModItemGroup.ENDIUM)));
+    // Culminite Tools
+    public static final Item CULMINITE_SWORD = registerItem("culminite_sword",
+            new SwordItem(ModToolMaterials.CULMINITE, 3, -2.4f,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENDIUM)));
+    public static final Item CULMINITE_AXE = registerItem("culminite_axe",
+            new ModAxeItem(ModToolMaterials.CULMINITE, 5, -3.0f,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENDIUM)));
+    public static final Item CULMINITE_HOE = registerItem("culminite_hoe",
+            new ModHoeItem(ModToolMaterials.CULMINITE, -4, 0.0f,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENDIUM)));
+    public static final Item CULMINITE_SHOVEL = registerItem("culminite_shovel",
+            new ShovelItem(ModToolMaterials.CULMINITE, 1.5f, -3.0f,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENDIUM)));
+    public static final Item CULMINITE_PICKAXE = registerItem("culminite_pickaxe",
+            new ModPickaxeItem(ModToolMaterials.CULMINITE, 1, -2.8f,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENDIUM)));
+    // Culminite Armor
+    public static final Item CULMINITE_HELMET = registerItem("culminite_helmet",
+            new ModArmorItem(ModArmorMaterials.CULMINITE, EquipmentSlot.HEAD,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENDIUM)));
+    public static final Item CULMINITE_CHESTPLATE = registerItem("culminite_chestplate",
+            new ModArmorItem(ModArmorMaterials.CULMINITE, EquipmentSlot.CHEST,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENDIUM)));
+    public static final Item CULMINITE_LEGGINGS = registerItem("culminite_leggings",
+            new ModArmorItem(ModArmorMaterials.CULMINITE, EquipmentSlot.LEGS,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENDIUM)));
+    public static final Item CULMINITE_BOOTS = registerItem("culminite_boots",
+            new ModArmorItem(ModArmorMaterials.CULMINITE, EquipmentSlot.FEET,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENDIUM)));
+    public static final Item CULMINITE_ELYTRA = registerItem("culminite_elytra",
+            new ModElytraItem(new FabricItemSettings().maxDamage(484).fireproof().group(ModItemGroup.ENDIUM).rarity(Rarity.RARE)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EndiumMod.MOD_ID, name), item);
     }
 
     public static void registerModItems() {
-        EndiumMod.LOGGER.info("Registering Mod Items for " + EndiumMod.MOD_ID);
+        EndiumMod.LOGGER.info("Registering ModItems for " + EndiumMod.MOD_ID);
     }
 }

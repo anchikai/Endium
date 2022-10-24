@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "endium:chromium_boots"
+  },
+  "addition": {
+    "item": "endium:culminite_ingot"
+  },
+  "result": {
+    "item": "endium:culminite_boots"
+  }
+}

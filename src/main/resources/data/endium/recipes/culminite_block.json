@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "endium:culminite_ingot"
+    }
+  },
+  "result": {
+    "item": "endium:culminite_block"
+  }
+}

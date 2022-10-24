@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:village",
+  "biomes": [
+    "minecraft:end_highlands"
+  ],
+  "spawn_overrides": {},
+  "config": {
+    "start_pool": "endium:barren_temple",
+    "size": 7
+  }
+}

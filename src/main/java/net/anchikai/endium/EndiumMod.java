@@ -1,6 +1,10 @@
 package net.anchikai.endium;
 
 import net.anchikai.endium.block.ModBlocks;
+import net.anchikai.endium.enchantment.ModEnchantments;
+import net.anchikai.endium.event.callback.InventoryUpdateCallback;
+import net.anchikai.endium.event.handler.InventoryUpdateHandler;
+import net.anchikai.endium.init.ModEvents;
 import net.anchikai.endium.item.ModItems;
 import net.anchikai.endium.screen.EndiumModScreenHandlers;
 import net.anchikai.endium.util.ModRegistries;
@@ -62,7 +66,6 @@ public class EndiumMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		// Endium Ore
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
@@ -88,6 +91,8 @@ public class EndiumMod implements ModInitializer {
 		ModRegistries.registerModStuffs();
 		ModWorldGen.generateModWorldGen();
 		EndiumModScreenHandlers.init();
+		ModEnchantments.registerModEnchantments();
+		ModEvents.init();
 	}
 	public static Identifier id(String id) {
 		return new Identifier(MOD_ID, id);

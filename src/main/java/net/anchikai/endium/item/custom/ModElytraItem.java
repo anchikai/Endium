@@ -41,7 +41,7 @@ public class ModElytraItem extends ElytraItem implements FabricElytraItem {
 
     private boolean hasEndiumElytraOn(PlayerEntity player) {
         ItemStack elytra = player.getInventory().getArmorStack(2);
-        return elytra.isIn(EndiumTag.ENDIUM_ELYTRA);
+        return elytra.isIn(EndiumTag.ENDIUM_ELYTRA) || elytra.isIn(EndiumTag.CULMINITE_ELYTRA);
     }
 
 

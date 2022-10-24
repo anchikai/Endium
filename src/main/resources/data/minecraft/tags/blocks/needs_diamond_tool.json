@@ -3,6 +3,7 @@
   "values": [
     "endium:endium_block",
     "endium:endium_ore",
-    "endium:raw_endium_block"
+    "endium:raw_endium_block",
+    "endium:culminite_block"
   ]
 }

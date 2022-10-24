@@ -13,7 +13,8 @@
     "EndiumDropSaveMixin",
     "ChestBoatDropsMixin",
 
-    "BoatDropsMixin"
+    "BoatDropsMixin",
+    "PlayerInventoryMixin"
   ],
   "client": [
     "ItemRendererAccessor",

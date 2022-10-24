@@ -19,6 +19,11 @@ repositories {
 	maven { url = 'https://jitpack.io' }
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
+	maven { url "https://maven.jamieswhiteshirt.com/libs-release"
+		content {
+			includeGroup "com.jamieswhiteshirt"
+		}
+	}
 }
 
 dependencies {
@@ -45,6 +50,9 @@ dependencies {
 		exclude (group: "net.fabricmc.fabric-api")
 	}
 	include("com.github.Chocohead:Fabric-ASM:v${project.fabric_asm_version}")
+
+	// Reach Entity Attributes
+	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:2.3.0")
 }
 
 processResources {

@@ -14,7 +14,9 @@ public enum ModArmorMaterials implements ArmorMaterial {
     ENDIUM("endium", 35, new int[]{3, 6, 8, 3}, 15,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.0f, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT)),
     CHROMIUM("chromium", 34, new int[]{3, 6, 7, 3}, 11,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 4.0f, 0.2f, () -> Ingredient.ofItems(ModItems.CHROMIUM_INGOT));
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 4.0f, 0.2f, () -> Ingredient.ofItems(ModItems.CHROMIUM_INGOT)),
+    CULMINITE("culminite", 37, new int[]{3, 6, 8, 3}, 15,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.CULMINITE_INGOT));
 
     private static final int[] BASE_DURABILITY;
     private final String name;

@@ -7,7 +7,7 @@
       "model": "endium:block/cobbled_end_stone"
     },
     "type=top": {
-      "model": "endium:block/cobbled_end_stone_top"
+      "model": "endium:block/cobbled_end_stone_slab_top"
     }
   }
 }

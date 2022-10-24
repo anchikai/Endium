@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "endium:chromium_hoe"
+  },
+  "addition": {
+    "item": "endium:culminite_ingot"
+  },
+  "result": {
+    "item": "endium:culminite_hoe"
+  }
+}

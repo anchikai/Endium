@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " e ",
+    "cDc",
+    " n "
+  ],
+  "key": {
+    "e": {
+      "item": "endium:endium_ingot"
+    },
+    "c": {
+      "item": "endium:chromium_ingot"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "endium:culminite_ingot",
+    "count": 1
+  }
+}

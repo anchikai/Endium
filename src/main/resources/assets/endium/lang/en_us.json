@@ -19,6 +19,20 @@
   "block.endium.endium_ore": "Endium Ore",
   "block.endium.raw_endium_block": "Block of Raw Endium",
 
+  "item.endium.culminite_axe": "Culminite Axe",
+  "item.endium.culminite_boots": "Culminite Boots",
+  "item.endium.culminite_chestplate": "Culminite Chestplate",
+  "item.endium.culminite_helmet": "Culminite Helmet",
+  "item.endium.culminite_hoe": "Culminite Hoe",
+  "item.endium.culminite_ingot": "Culminite Ingot",
+  "item.endium.culminite_leggings": "Culminite Leggings",
+  "item.endium.culminite_pickaxe": "Culminite Pickaxe",
+  "item.endium.culminite_shovel": "Culminite Shovel",
+  "item.endium.culminite_sword": "Culminite Sword",
+  "item.endium.culminite_elytra": "Culminite Elytra",
+
+  "block.endium.culminite_block": "Block of Culminite",
+
   "item.endium.chromium_axe": "Chromium Axe",
   "item.endium.chromium_boots": "Chromium Boots",
   "item.endium.chromium_chestplate": "Chromium Chestplate",
@@ -92,6 +106,8 @@
 
   "biome.endium.melancho": "Melancho",
   "biome.endium.dusty_wastes": "Dusty Wastes",
+
+  "enchantment.endium.reach": "Reach",
 
   "itemGroup.endium.endium": "The Endium Expansion"
 }

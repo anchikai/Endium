@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "endium:endium_mine",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 34298750,
+    "spacing": 20,
+    "separation": 11,
+    "type": "minecraft:random_spread"
+  }
+}

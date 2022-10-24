@@ -1,4 +1,4 @@
 {
   "replace": false,
-  "values": ["endium:endium_ore", "endium:raw_endium_block", "endium:endium_block"]
+  "values": ["endium:endium_ore", "endium:raw_endium_block", "endium:endium_block", "endium:culminite_block"]
 }

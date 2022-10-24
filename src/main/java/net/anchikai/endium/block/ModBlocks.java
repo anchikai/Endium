@@ -56,6 +56,10 @@ public class ModBlocks {
     public static final Block CHROMIUM_ANVIL = registerBlock("chromium_anvil",
             new ModAnvilBlock(FabricBlockSettings.of(Material.REPAIR_STATION).strength(5.0f, 1200.0f).requiresTool().mapColor(MapColor.IRON_GRAY).sounds(BlockSoundGroup.ANVIL)),
                 ModItemGroup.ENDIUM);
+    // Culminite Blocks
+    public static final Block CULMINITE_BLOCK = registerBlock("culminite_block",
+            new Block(FabricBlockSettings.copy(Blocks.NETHERITE_BLOCK).mapColor(MapColor.CYAN)),
+                ModItemGroup.ENDIUM);
     // End Blocks
     public static final Block COBBLED_END_STONE = registerBlock("cobbled_end_stone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f, 9.0f).requiresTool().mapColor(MapColor.PALE_YELLOW)),

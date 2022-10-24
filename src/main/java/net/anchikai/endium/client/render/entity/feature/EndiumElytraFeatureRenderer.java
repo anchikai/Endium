@@ -24,12 +24,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 @Environment(value=EnvType.CLIENT)
-public class ModElytraFeatureRenderer<T extends LivingEntity, M extends EntityModel<T>>
+public class EndiumElytraFeatureRenderer<T extends LivingEntity, M extends EntityModel<T>>
         extends FeatureRenderer<T, M> {
     private static final Identifier SKIN = new Identifier("textures/entity/endium_elytra.png");
     private final ElytraEntityModel<T> elytra;
 
-    public ModElytraFeatureRenderer(FeatureRendererContext<T, M> context, EntityModelLoader loader) {
+    public EndiumElytraFeatureRenderer(FeatureRendererContext<T, M> context, EntityModelLoader loader) {
         super(context);
         this.elytra = new ElytraEntityModel<>(loader.getModelPart(EntityModelLayers.ELYTRA));
     }

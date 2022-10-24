@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "endium:chromium_pickaxe"
+  },
+  "addition": {
+    "item": "endium:culminite_ingot"
+  },
+  "result": {
+    "item": "endium:culminite_pickaxe"
+  }
+}

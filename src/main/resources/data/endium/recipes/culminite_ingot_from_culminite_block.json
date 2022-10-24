@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "endium:culminite_block"
+    }
+  ],
+  "result": {
+    "item": "endium:culminite_ingot",
+    "count": 9
+  }
+}

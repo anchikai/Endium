@@ -1,0 +1,19 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 34298749,
+    "separation": 11,
+    "spacing": 20,
+    "spread_type": "triangular"
+  },
+  "structures": [
+    {
+      "structure": "endium:barren_temple",
+      "weight": 2
+    },
+    {
+      "structure": "endium:barren_temple_wither",
+      "weight": 1
+    }
+  ]
+}

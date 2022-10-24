@@ -1,0 +1,62 @@
+{
+  "parent": "endium:end/endium_armor",
+  "display": {
+    "icon": {
+      "item": "endium:culminite_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "title": "Culmination",
+    "description": "Get a full suit of Culminite armor and a full set of Culminite tools",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "experience": 1000
+  },
+  "criteria": {
+    "culminite_gear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["endium:culminite_helmet"]
+          },
+          {
+            "items": ["endium:culminite_chestplate"]
+          },
+          {
+            "items": ["endium:culminite_leggings"]
+          },
+          {
+            "items": ["endium:culminite_boots"]
+          },
+          {
+            "items": ["endium:culminite_elytra"]
+          },
+          {
+            "items": ["endium:culminite_sword"]
+          },
+          {
+            "items": ["endium:culminite_pickaxe"]
+          },
+          {
+            "items": ["endium:culminite_axe"]
+          },
+          {
+            "items": ["endium:culminite_shovel"]
+          },
+          {
+            "items": ["endium:culminite_hoe"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "culminite_gear"
+    ]
+  ]
+}
