@@ -1,28 +1,19 @@
 {
-  "required": true,
-  "minVersion": "0.8",
-  "package": "net.anchikai.endium.mixin",
-  "compatibilityLevel": "JAVA_17",
-  "mixins": [
-    "BlockEntityTypeMixin",
-    "MobEntityMixin",
-    "ServerPlayNetworkHandlerMixin",
-    "RendererMixin",
-    "SignTypeAccessor",
-    "EndiumDropMixin",
-    "EndiumDropSaveMixin",
-    "ChestBoatDropsMixin",
-
-    "BoatDropsMixin",
-    "PlayerInventoryMixin"
-  ],
-  "client": [
-    "ItemRendererAccessor",
-    "ItemRendererMixin",
-    "ModelLoaderMixin",
-    "TridentEntityRendererMixin"
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+    "required": true,
+    "package": "net.anchikai.endium.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [
+        "AmaranthBoatEntityMixin",
+        "AmaranthChestBoatEntityMixin",
+        "BlockEntityTypeMixin",
+        "BoatEntityTypeMixin",
+        "EndiumDropMixin",
+        "EndiumDropSaveMixin"
+    ],
+    "client": [
+        "TridentEntityRendererMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+	}
 }

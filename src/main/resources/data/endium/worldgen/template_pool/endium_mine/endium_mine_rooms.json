@@ -48,6 +48,15 @@
       }
     },
     {
+      "weight": 2,
+      "element": {
+        "location": "endium:end/endium_mine/endium_mine_corridor_treasure",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
       "weight": 3,
       "element": {
         "location": "endium:end/endium_mine/endium_mine_rest_room_1",
@@ -84,15 +93,6 @@
       }
     },
     {
-      "weight": 1,
-      "element": {
-        "location": "endium:end/endium_mine/endium_mine_treasure_room",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
       "weight": 3,
       "element": {
         "location": "endium:end/endium_mine/endium_mine_rest_room_5",
@@ -105,6 +105,24 @@
       "weight": 2,
       "element": {
         "location": "endium:end/endium_mine/endium_mine_rest_room_6",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "endium:end/endium_mine/endium_mine_treasure_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "endium:end/endium_mine/endium_mine_treasure_room_2",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

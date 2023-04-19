@@ -1,6 +1,6 @@
 package net.anchikai.endium.mixin;
 
-import net.anchikai.endium.misc.EndiumTag;
+import net.anchikai.endium.misc.EndiumModTags;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
@@ -26,7 +26,7 @@ public abstract class EndiumDropSaveMixin extends Entity {
     private void damageItem(CallbackInfo info) {
         // Items in the void will be teleported up
         if (this.getY() < this.world.getBottomY()) {
-            if (getStack().isIn(EndiumTag.ENDIUM_ITEM)) {
+            if (getStack().isIn(EndiumModTags.ENDIUM_ITEM)) {
                 this.unsetRemoved();
                 this.requestTeleport(this.getX(), this.world.getBottomY()+1, this.getZ());
                 this.setVelocity(0, 0, 0);

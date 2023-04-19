@@ -1,12 +1,14 @@
 package net.anchikai.endium.item;
 
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.anchikai.endium.EndiumMod;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Identifier;
+import net.minecraft.text.Text;
 
 public class ModItemGroup {
-    public static final ItemGroup ENDIUM = FabricItemGroupBuilder.build(new Identifier(EndiumMod.MOD_ID, "endium"),
-            () -> new ItemStack(ModItems.ENDIUM_INGOT));
+    public static final ItemGroup ENDIUM = FabricItemGroup.builder(EndiumMod.id("the_endium_expansion"))
+            .displayName(Text.translatable("itemgroup.endium"))
+            .icon(() -> new ItemStack(EndiumItems.ENDIUM_INGOT))
+            .build();
 }

@@ -1,6 +1,6 @@
 package net.anchikai.endium.entity;
 
-import net.anchikai.endium.item.ModItems;
+import net.anchikai.endium.item.EndiumItems;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -9,7 +9,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.Packet;
+import net.minecraft.network.listener.ClientPlayPacketListener;
+import net.minecraft.network.packet.Packet;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
@@ -21,14 +22,15 @@ import net.minecraft.world.World;
 
 public class EndiumTridentEntity extends TridentEntity {
     private final ItemStack tridentStack;
+    private boolean dealtDamage;
 
     static {
-        new ItemStack(ModItems.ENDIUM_TRIDENT);
+        new ItemStack(EndiumItems.ENDIUM_TRIDENT);
     }
 
     public EndiumTridentEntity(EntityType<? extends TridentEntity> entityType, World world) {
         super(entityType, world);
-        tridentStack = new ItemStack(ModItems.ENDIUM_TRIDENT);
+        tridentStack = new ItemStack(EndiumItems.ENDIUM_TRIDENT);
     }
 
     public EndiumTridentEntity(World world, LivingEntity owner, ItemStack stack) {
@@ -40,25 +42,28 @@ public class EndiumTridentEntity extends TridentEntity {
     protected void onEntityHit(EntityHitResult entityHitResult) {
         Entity entity = entityHitResult.getEntity();
         float f = 8.0F;
-        if (entity instanceof LivingEntity livingEntity) {
-            f += EnchantmentHelper.getAttackDamage(tridentStack, livingEntity.getGroup());
+        if (entity instanceof LivingEntity) {
+            LivingEntity livingEntity = (LivingEntity)entity;
+            f += EnchantmentHelper.getAttackDamage(this.tridentStack, livingEntity.getGroup());
         }
 
-        Entity entity2 = getOwner();
-        DamageSource damageSource = DamageSource.trident(this, entity2 == null ? this : entity2);
+        Entity entity2 = this.getOwner();
+        DamageSource damageSource = this.getDamageSources().trident(this, (Entity)(entity2 == null ? this : entity2));
+        this.dealtDamage = true;
         SoundEvent soundEvent = SoundEvents.ITEM_TRIDENT_HIT;
         if (entity.damage(damageSource, f)) {
             if (entity.getType() == EntityType.ENDERMAN) {
                 return;
             }
 
-            if (entity instanceof LivingEntity livingEntity2) {
+            if (entity instanceof LivingEntity) {
+                LivingEntity livingEntity2 = (LivingEntity)entity;
                 if (entity2 instanceof LivingEntity) {
                     EnchantmentHelper.onUserDamaged(livingEntity2, entity2);
-                    EnchantmentHelper.onTargetDamaged((LivingEntity) entity2, livingEntity2);
+                    EnchantmentHelper.onTargetDamaged((LivingEntity)entity2, livingEntity2);
                 }
 
-                onHit(livingEntity2);
+                this.onHit(livingEntity2);
             }
         }
 
@@ -81,7 +86,7 @@ public class EndiumTridentEntity extends TridentEntity {
     }
 
     @Override
-    public Packet<?> createSpawnPacket() {
+    public Packet<ClientPlayPacketListener> createSpawnPacket() {
         return super.createSpawnPacket();
     }
 }

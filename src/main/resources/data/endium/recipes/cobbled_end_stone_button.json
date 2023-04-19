@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "stone_button",
+  "ingredients": [
+    {
+      "item": "endium:cobbled_end_stone"
+    }
+  ],
+  "result": {
+    "item": "endium:cobbled_end_stone_button"
+  }
+}

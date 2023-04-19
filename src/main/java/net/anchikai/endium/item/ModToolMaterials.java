@@ -1,7 +1,6 @@
 package net.anchikai.endium.item;
 
 import net.fabricmc.yarn.constants.MiningLevels;
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
@@ -9,9 +8,9 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    ENDIUM(MiningLevels.DIAMOND, 1796, 39.0f, 5.0f, 15, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT)),
-    CHROMIUM(MiningLevels.IRON, 1639, 8.0f, 2.5f, 16, () -> Ingredient.ofItems(ModItems.CHROMIUM_INGOT)),
-    CULMINITE(MiningLevels.NETHERITE, 2031, 39.0f, 5.0f, 15, () -> Ingredient.ofItems(ModItems.CULMINITE_INGOT));
+    ENDIUM(MiningLevels.DIAMOND, 1796, 39.0f, 5.0f, 15, () -> Ingredient.ofItems(EndiumItems.ENDIUM_INGOT)),
+    CHROMIUM(MiningLevels.IRON, 1639, 8.0f, 2.5f, 16, () -> Ingredient.ofItems(ChromiumItems.CHROMIUM_INGOT)),
+    CULMINITE(MiningLevels.NETHERITE, 2031, 39.0f, 5.0f, 15, () -> Ingredient.ofItems(CulminiteItems.CULMINITE_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;

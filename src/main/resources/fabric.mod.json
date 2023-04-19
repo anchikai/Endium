@@ -1,41 +1,40 @@
 {
-  "schemaVersion": 1,
-  "id": "endium",
-  "version": "${version}",
-
-  "name": "The Endium Expansion",
-  "description": "This is a mod that adds an alternative to Netherite with its own unique properties as well as more materials to The End.",
-  "authors": [
-    "anchikai."
-  ],
-  "contact": {
-    "homepage": "https://modrinth.com/mod/endium",
-    "sources": "https://https://github.com/anchikai/Endium"
-  },
-
-  "license": "MIT",
-  "icon": "assets/endium/icon.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.anchikai.endium.EndiumMod"
-    ],
-    "client": [
-        "net.anchikai.endium.EndiumModClient"
-    ]
-  },
-  "mixins": [
-    "endium.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.14.6",
-    "fabric": "*",
-    "minecraft": "1.19.x",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
-  }
+	"schemaVersion": 1,
+	"id": "endium",
+	"version": "${version}",
+	"name": "The Endium Expansion",
+	"description": "This is a mod that adds an alternative to Netherite with its own unique properties as well as more materials to The End.",
+	"authors": [
+		"anchikai."
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/endium",
+		"sources": "https://https://github.com/anchikai/Endium"
+	},
+	"license": "MIT",
+	"icon": "assets/endium/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.anchikai.endium.EndiumMod"
+		],
+		"client": [
+          "net.anchikai.endium.EndiumModClient"
+		],
+		"fabric-datagen": [
+			"net.anchikai.endium.EndiumModDataGenerator"
+		]
+	},
+	"mixins": [
+        "endium.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.12",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
 }

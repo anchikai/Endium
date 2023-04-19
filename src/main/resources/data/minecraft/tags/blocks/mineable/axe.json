@@ -1,18 +1,6 @@
 {
-  "replace": false,
-  "values": [
-    "endium:amaranth_log",
-    "endium:amaranth_wood",
-    "endium:stripped_amaranth_log",
-    "endium:stripped_amaranth_wood",
-    "endium:amaranth_planks",
-    "endium:amaranth_button",
-    "endium:amaranth_pressure_plate",
-    "endium:amaranth_fence",
-    "endium:amaranth_fence_gate",
-    "endium:amaranth_slab",
-    "endium:amaranth_stairs",
-    "endium:amaranth_door",
-    "endium:amaranth_trapdoor"
-  ]
+    "replace": false,
+    "values": [
+        
+    ]
 }

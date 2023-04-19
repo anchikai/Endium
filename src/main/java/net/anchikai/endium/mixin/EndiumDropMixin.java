@@ -1,13 +1,11 @@
 package net.anchikai.endium.mixin;
 
-import net.anchikai.endium.misc.EndiumTag;
+import net.anchikai.endium.misc.EndiumModTags;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
-
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -28,11 +26,11 @@ public abstract class EndiumDropMixin extends Entity {
     private void dropItem(CallbackInfo info) {
         // If endium item entity has gravity, turn it off
         if (!hasNoGravity() && !world.isClient && !getStack().isEmpty()
-                && (getStack().isIn(EndiumTag.ENDIUM_ITEM))) {
+                && (getStack().isIn(EndiumModTags.ENDIUM_ITEM))) {
             setNoGravity(true);
         }
         // Slow down endium item y velocity (to stop vertical spread)
-        if ((getStack().isIn(EndiumTag.ENDIUM_ITEM))) {
+        if ((getStack().isIn(EndiumModTags.ENDIUM_ITEM))) {
             this.setVelocity(this.getVelocity().multiply(1.0D, 0.96D, 1.0D));
         }
     }
