@@ -33,7 +33,7 @@ public class AmaranthBlocks {
     public static final Block AMARANTH_DOOR = registerBlock("amaranth_door",
             new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR).nonOpaque(), ModBlockSetType.AMARANTH), ModItemGroup.ENDIUM);
     public static final Block AMARANTH_TRAPDOOR = registerBlock("amaranth_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).nonOpaque(), BlockSetType.OAK), ModItemGroup.ENDIUM);
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).nonOpaque(), ModBlockSetType.AMARANTH), ModItemGroup.ENDIUM);
     public static final Block AMARANTH_PRESSURE_PLATE = registerBlock("amaranth_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK), ModItemGroup.ENDIUM);
     public static final Block AMARANTH_BUTTON = registerBlock("amaranth_button",

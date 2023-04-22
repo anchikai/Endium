@@ -1,12 +1,14 @@
 package net.anchikai.endium;
 
 import net.anchikai.endium.block.*;
+import net.anchikai.endium.enchantment.ModEnchantments;
 import net.anchikai.endium.entity.ModEntities;
+import net.anchikai.endium.init.ModEvents;
 import net.anchikai.endium.item.AmaranthItems;
 import net.anchikai.endium.item.ChromiumItems;
 import net.anchikai.endium.item.CulminiteItems;
 import net.anchikai.endium.item.EndiumItems;
-import net.anchikai.endium.world.gen.ModWorldGeneration;
+import net.anchikai.endium.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -29,13 +31,19 @@ public class EndiumMod implements ModInitializer {
 		AmaranthItems.register();
 
 		EndStoneBlocks.register();
+		EndBlocks.register();
+
+		PlantBlocks.register();
 
 		ModEntities.registerModEntities();
 
-		ModWorldGeneration.generateModWorldGen();
+		ModWorldGen.generateModWorldGen();
 
 		ModFlammableBlockRegistry.registerFlammableBlocks();
 		ModStrippableBlockRegistry.registerStrippableBlocks();
+
+		ModEnchantments.register();
+		ModEvents.register();
 	}
 
 	public static Identifier id(String path) {

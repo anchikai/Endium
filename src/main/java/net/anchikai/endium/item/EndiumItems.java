@@ -33,10 +33,14 @@ public class EndiumItems {
     public static final Item ENDIUM_ELYTRA = registerItem("endium_elytra",
             new EndiumElytraItem(new FabricItemSettings().maxDamage(281).rarity(Rarity.UNCOMMON)));
 
+    public static final Item RAW_ENDIUM = registerItem("raw_endium",
+            new Item(new FabricItemSettings()));
     public static final Item ENDIUM_SCRAP = registerItem("endium_scrap",
             new Item(new FabricItemSettings()));
     public static final Item ENDIUM_INGOT = registerItem("endium_ingot",
             new Item(new FabricItemSettings()));
+    public static final Item ECHOPEARL = registerItem("echopearl",
+            new EchoPearlItem(new FabricItemSettings().maxCount(16)));
 
 
     public static void addItemsToItemGroup() {
@@ -51,8 +55,10 @@ public class EndiumItems {
         addToItemGroup(ModItemGroup.ENDIUM, ENDIUM_LEGGINGS);
         addToItemGroup(ModItemGroup.ENDIUM, ENDIUM_BOOTS);
         addToItemGroup(ModItemGroup.ENDIUM, ENDIUM_ELYTRA);
+        addToItemGroup(ModItemGroup.ENDIUM, RAW_ENDIUM);
         addToItemGroup(ModItemGroup.ENDIUM, ENDIUM_SCRAP);
         addToItemGroup(ModItemGroup.ENDIUM, ENDIUM_INGOT);
+        addToItemGroup(ModItemGroup.ENDIUM, ECHOPEARL);
     }
 
     public static void register() {

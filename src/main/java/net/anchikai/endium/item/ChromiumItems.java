@@ -19,7 +19,7 @@ public class ChromiumItems {
     public static final Item CHROMIUM_SWORD = registerItem("chromium_sword",
             new SwordItem(ModToolMaterials.CHROMIUM, 3, -2.4f, new FabricItemSettings()));
     public static final Item CHROMIUM_SHIELD = registerItem("chromium_shield",
-            new ShieldItem(new FabricItemSettings().maxDamage(1867)));
+            new ChromiumShieldItem(new FabricItemSettings().maxDamage(1867)));
 
     public static final Item CHROMIUM_HELMET = registerItem("chromium_helmet",
             new EndiumArmorItem(ChromiumArmorMaterials.CHROMIUM, ArmorItem.Type.HELMET, new FabricItemSettings()));

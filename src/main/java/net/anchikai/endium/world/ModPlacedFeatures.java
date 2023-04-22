@@ -18,6 +18,11 @@ import java.util.List;
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> AMARANTH_PLACED_KEY = registerKey("amaranth_placed");
 
+    public static final RegistryKey<PlacedFeature> END_DUST_PLACED_KEY = registerKey("end_dust");
+    public static final RegistryKey<PlacedFeature> END_ICE_PLACED_KEY = registerKey("end_ice_patch");
+
+    public static final RegistryKey<PlacedFeature> LUNGWORT_FLOWER_PLACED_KEY = registerKey("lungwort_flower");
+
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
