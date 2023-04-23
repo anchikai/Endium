@@ -7,11 +7,9 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
-import net.minecraft.world.gen.placementmodifier.RarityFilterPlacementModifier;
-import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
+import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
@@ -23,11 +21,21 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> LUNGWORT_FLOWER_PLACED_KEY = registerKey("lungwort_flower");
 
+    public static final RegistryKey<PlacedFeature> CHROMIUM_ORE_PLACED_KEY = registerKey("chromium_ore_placed");
+    public static final RegistryKey<PlacedFeature> ENDIUM_ORE_PLACED_KEY = registerKey("endium_ore_placed");
+
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, AMARANTH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.AMARANTH_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.0008f, 1), AmaranthBlocks.AMARANTH_SAPLING));
+
+        register(context, CHROMIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CHROMIUM_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(2, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(54))));
+        register(context, ENDIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ENDIUM_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(2, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(32))));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
