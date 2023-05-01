@@ -11,10 +11,6 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
-repositories {
-
-}
-
 loom {
     runs {
         // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"

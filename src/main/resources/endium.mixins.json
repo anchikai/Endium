@@ -8,9 +8,11 @@
         "BlockEntityTypeMixin",
         "BoatEntityTypeMixin",
         "EndiumDropMixin",
-        "EndiumDropSaveMixin"
+        "EndiumDropSaveMixin",
+        "ServerPlayNetworkHandlerMixin"
     ],
     "client": [
+        "InGameOverlayRendererMixin",
         "TridentEntityRendererMixin"
     ],
     "injectors": {

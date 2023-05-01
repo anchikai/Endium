@@ -1,5 +1,6 @@
 package net.anchikai.endium.block;
 
+import net.anchikai.endium.screen.ChromiumAnvilScreenHandler;
 import net.minecraft.block.AnvilBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.screen.AnvilScreenHandler;
@@ -19,6 +20,6 @@ public class ChromiumAnvilBlock extends AnvilBlock {
 
     @Override
     public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
-        return new SimpleNamedScreenHandlerFactory((i, playerInventory, playerEntity) -> new AnvilScreenHandler(i, playerInventory, ScreenHandlerContext.create(world, pos)), TITLE);
+        return new SimpleNamedScreenHandlerFactory((i, playerInventory, playerEntity) -> new ChromiumAnvilScreenHandler(i, playerInventory, ScreenHandlerContext.create(world, pos)), TITLE);
     }
 }

@@ -7,6 +7,7 @@ import net.anchikai.endium.client.render.entity.feature.EndiumElytraFeatureRende
 import net.anchikai.endium.item.CulminiteItems;
 import net.anchikai.endium.item.EndiumElytraItem;
 import net.anchikai.endium.item.EndiumItems;
+import net.anchikai.endium.screen.EndiumModScreenHandlers;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -45,6 +46,8 @@ public class EndiumModClient implements ClientModInitializer {
         LivingEntityFeatureRenderEvents.ALLOW_CAPE_RENDER.register(EndiumModClient::allowCapeRender);
 
         EntityModelLayerRegistry.registerModelLayer(CHROMIUM_SHIELD_MODEL_LAYER, ShieldEntityModel::getTexturedModelData);
+
+        EndiumModScreenHandlers.initializeClient();
     }
 
     @Environment(EnvType.CLIENT)

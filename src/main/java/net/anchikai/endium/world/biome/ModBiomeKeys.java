@@ -7,5 +7,5 @@ import net.minecraft.world.biome.Biome;
 
 public abstract class ModBiomeKeys {
     public static final RegistryKey<Biome> DUSTY_WASTES = DawnFactory.biome(EndiumMod.id("dusty_wastes"));
-    public static final RegistryKey<Biome> MELANCHO = DawnFactory.biome(EndiumMod.id("melencho"));
+    public static final RegistryKey<Biome> MELANCHO = DawnFactory.biome(EndiumMod.id("melancho"));
 }
