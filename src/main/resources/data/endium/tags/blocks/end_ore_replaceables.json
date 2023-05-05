@@ -1,6 +1,5 @@
 {
     "values": [
-        "minecraft:end_stone",
-        "endium:end_dust"
+        "#endium:base_stone_end"
     ]
 }

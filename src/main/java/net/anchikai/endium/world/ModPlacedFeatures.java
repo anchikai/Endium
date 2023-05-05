@@ -2,12 +2,14 @@ package net.anchikai.endium.world;
 
 import net.anchikai.endium.EndiumMod;
 import net.anchikai.endium.block.AmaranthBlocks;
+import net.anchikai.endium.misc.EndiumModTags;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.*;
 
@@ -18,6 +20,7 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> END_DUST_PLACED_KEY = registerKey("end_dust");
     public static final RegistryKey<PlacedFeature> END_ICE_PLACED_KEY = registerKey("end_ice_patch");
+    public static final RegistryKey<PlacedFeature> END_ICE_SPIKE_PLACED_KEY = registerKey("end_ice_spike");
 
     public static final RegistryKey<PlacedFeature> LUNGWORT_FLOWER_PLACED_KEY = registerKey("lungwort_flower");
 
@@ -36,10 +39,13 @@ public class ModPlacedFeatures {
         register(context, ENDIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ENDIUM_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(2, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(32))));
+
+        register(context, END_ICE_SPIKE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_ICE_SPIKE_KEY),
+                CountPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(-1)), BlockFilterPlacementModifier.of(BlockPredicate.matchingBlockTag(EndiumModTags.BASE_STONE_END)), BiomePlacementModifier.of());
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(EndiumMod.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, EndiumMod.id(name));
     }
 
     private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,

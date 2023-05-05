@@ -1,15 +1,33 @@
 {
-  "name": "endium:end/camp_site",
-  "fallback": "minecraft:empty",
-  "elements": [
-    {
-      "weight": 1,
-      "element": {
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element",
-        "location": "endium:end/camp_site",
-        "processors": "minecraft:empty"
-      }
-    }
-  ]
+    "name": "endium:end/camp_site",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 4,
+            "element": {
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element",
+                "location": "endium:end/camp_site",
+                "processors": "minecraft:empty"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element",
+                "location": "endium:end/camp_site_skull",
+                "processors": "minecraft:empty"
+            }
+        },
+        {
+            "weight": 2,
+            "element": {
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element",
+                "location": "endium:end/camp_site_treasure",
+                "processors": "minecraft:empty"
+            }
+        }
+    ]
 }
