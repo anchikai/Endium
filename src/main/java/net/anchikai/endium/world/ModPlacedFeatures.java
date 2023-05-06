@@ -1,5 +1,6 @@
 package net.anchikai.endium.world;
 
+import fr.hugman.dawn.DawnFactory;
 import net.anchikai.endium.EndiumMod;
 import net.anchikai.endium.block.AmaranthBlocks;
 import net.anchikai.endium.misc.EndiumModTags;
@@ -16,17 +17,16 @@ import net.minecraft.world.gen.placementmodifier.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> AMARANTH_PLACED_KEY = registerKey("amaranth_placed");
+    public static final RegistryKey<PlacedFeature> AMARANTH_PLACED_KEY = DawnFactory.placedFeature(EndiumMod.id("amaranth_placed"));
 
-    public static final RegistryKey<PlacedFeature> END_DUST_PLACED_KEY = registerKey("end_dust");
-    public static final RegistryKey<PlacedFeature> END_ICE_PLACED_KEY = registerKey("end_ice_patch");
-    public static final RegistryKey<PlacedFeature> END_ICE_SPIKE_PLACED_KEY = registerKey("end_ice_spike");
-    public static final RegistryKey<PlacedFeature> ICEBERG_END_PLACED_KEY = registerKey("iceberg_end");
+    public static final RegistryKey<PlacedFeature> END_DUST_PLACED_KEY = DawnFactory.placedFeature(EndiumMod.id("end_dust"));
+    public static final RegistryKey<PlacedFeature> END_ICE_PLACED_KEY = DawnFactory.placedFeature(EndiumMod.id("end_ice_patch"));
+    public static final RegistryKey<PlacedFeature> END_ICE_SPIKE_PLACED_KEY = DawnFactory.placedFeature(EndiumMod.id("end_ice_spike"));
 
-    public static final RegistryKey<PlacedFeature> LUNGWORT_FLOWER_PLACED_KEY = registerKey("lungwort_flower");
+    public static final RegistryKey<PlacedFeature> LUNGWORT_FLOWER_PLACED_KEY = DawnFactory.placedFeature(EndiumMod.id("lungwort_flower"));
 
-    public static final RegistryKey<PlacedFeature> CHROMIUM_ORE_PLACED_KEY = registerKey("chromium_ore_placed");
-    public static final RegistryKey<PlacedFeature> ENDIUM_ORE_PLACED_KEY = registerKey("endium_ore_placed");
+    public static final RegistryKey<PlacedFeature> CHROMIUM_ORE_PLACED_KEY = DawnFactory.placedFeature(EndiumMod.id("chromium_ore_placed"));
+    public static final RegistryKey<PlacedFeature> ENDIUM_ORE_PLACED_KEY = DawnFactory.placedFeature(EndiumMod.id("endium_ore_placed"));
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -43,10 +43,6 @@ public class ModPlacedFeatures {
 
         register(context, END_ICE_SPIKE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_ICE_SPIKE_KEY),
                 CountPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(-1)), BlockFilterPlacementModifier.of(BlockPredicate.matchingBlockTag(EndiumModTags.BASE_STONE_END)), BiomePlacementModifier.of());
-    }
-
-    public static RegistryKey<PlacedFeature> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, EndiumMod.id(name));
     }
 
     private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,

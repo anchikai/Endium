@@ -6,7 +6,6 @@ import net.anchikai.endium.block.AmaranthBlocks;
 import net.anchikai.endium.block.ChromiumBlocks;
 import net.anchikai.endium.block.EndiumBlocks;
 import net.anchikai.endium.misc.EndiumModTags;
-import net.anchikai.endium.world.gen.feature.ModFeatureKeys;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -27,7 +26,6 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CHROMIUM_ORE_KEY = DawnFactory.configuredFeature(EndiumMod.id("chromium_ore"));
     public static final RegistryKey<ConfiguredFeature<?, ?>> ENDIUM_ORE_KEY = DawnFactory.configuredFeature(EndiumMod.id("endium_ore"));
     public static final RegistryKey<ConfiguredFeature<?, ?>> END_ICE_SPIKE_KEY = DawnFactory.configuredFeature(EndiumMod.id("end_ice_spike"));
-    public static final RegistryKey<ConfiguredFeature<?, ?>> ICEBERG_END_KEY = DawnFactory.configuredFeature(EndiumMod.id("iceberg_end"));
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest endstoneReplaceables = new TagMatchRuleTest(EndiumModTags.END_ORE_REPLACEABLES);
@@ -50,8 +48,6 @@ public class ModConfiguredFeatures {
 
         register(context, CHROMIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endChromiumOres, 8));
         register(context, ENDIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endEndiumOres, 4));
-
-        register(context, END_ICE_SPIKE_KEY, ModFeatureKeys.END_ICE_SPIKE, FeatureConfig.DEFAULT);
     }
 
     private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,

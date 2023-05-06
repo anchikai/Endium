@@ -12,6 +12,7 @@ import net.anchikai.endium.item.EndiumItems;
 import net.anchikai.endium.screen.EndiumModScreenHandlers;
 import net.anchikai.endium.world.biome.EndBiomeRegistry;
 import net.anchikai.endium.world.gen.ModWorldGen;
+import net.anchikai.endium.world.gen.feature.EndiumFeatures;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -51,6 +52,7 @@ public class EndiumMod implements ModInitializer {
 		ModEvents.register();
 
 		EndBiomeRegistry.register(REGISTRAR);
+		EndiumFeatures.register();
 	}
 
 	public static Identifier id(String path) {

@@ -4,6 +4,7 @@ import net.anchikai.endium.world.ModPlacedFeatures;
 import net.anchikai.endium.world.biome.ModBiomeKeys;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.EndPlacedFeatures;
 import net.minecraft.world.gen.feature.PlacedFeatures;
@@ -21,11 +22,9 @@ public class ModFeatureGen {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomeKeys.MELANCHO),
                 GenerationStep.Feature.TOP_LAYER_MODIFICATION, ModPlacedFeatures.END_ICE_SPIKE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomeKeys.MELANCHO),
-                GenerationStep.Feature.TOP_LAYER_MODIFICATION, ModPlacedFeatures.ICEBERG_END_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomeKeys.MELANCHO),
                 GenerationStep.Feature.SURFACE_STRUCTURES, EndPlacedFeatures.END_GATEWAY_RETURN);
 
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_END, BiomeKeys.END_HIGHLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.SMALL_END_ISLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUNGWORT_FLOWER_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),

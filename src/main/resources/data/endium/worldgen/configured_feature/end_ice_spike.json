@@ -1,4 +1,6 @@
 {
     "type": "endium:end_ice_spike",
-    "config": {}
+    "config": {
+        "block": "endium:end_ice"
+    }
 }

@@ -4,20 +4,21 @@ import com.mojang.serialization.Codec;
 import net.anchikai.endium.block.EndBlocks;
 import net.anchikai.endium.misc.EndiumModTags;
 import net.minecraft.block.BlockState;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.StructureWorldAccess;
-import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
-public class EndIceSpikeFeature extends Feature<DefaultFeatureConfig> {
-    public EndIceSpikeFeature(Codec<DefaultFeatureConfig> codec) {
+public class EndIceSpikeFeature extends Feature<EndIceSpikeFeatureConfig> {
+    public EndIceSpikeFeature(Codec<EndIceSpikeFeatureConfig> codec) {
         super(codec);
     }
 
-    public boolean generate(FeatureContext<DefaultFeatureConfig> context) {
+    public boolean generate(FeatureContext<EndIceSpikeFeatureConfig> context) {
+        EndIceSpikeFeatureConfig config = context.getConfig();
         BlockPos blockPos = context.getOrigin();
         Random random = context.getRandom();
 
@@ -49,13 +50,13 @@ public class EndIceSpikeFeature extends Feature<DefaultFeatureConfig> {
                         if ((m == 0 && n == 0 || !(g * g + h * h > f * f)) && (m != -l && m != l && n != -l && n != l || !(random.nextFloat() > 0.75F))) {
                             BlockState blockState = structureWorldAccess.getBlockState(blockPos.add(m, k, n));
                             if (blockState.isAir() || isSoil(blockState) || blockState.isIn(EndiumModTags.BASE_STONE_END) || blockState.isOf(EndBlocks.END_ICE)) {
-                                this.setBlockState(structureWorldAccess, blockPos.add(m, k, n), EndBlocks.END_ICE.getDefaultState());
+                                this.setBlockState(structureWorldAccess, blockPos.add(m, k, n), Registries.BLOCK.get(config.blockState()).getDefaultState());
                             }
 
                             if (k != 0 && l > 1) {
                                 blockState = structureWorldAccess.getBlockState(blockPos.add(m, -k, n));
                                 if (blockState.isAir() || isSoil(blockState) || blockState.isIn(EndiumModTags.BASE_STONE_END) || blockState.isOf(EndBlocks.END_ICE)) {
-                                    this.setBlockState(structureWorldAccess, blockPos.add(m, -k, n), EndBlocks.END_ICE.getDefaultState());
+                                    this.setBlockState(structureWorldAccess, blockPos.add(m, -k, n), Registries.BLOCK.get(config.blockState()).getDefaultState());
                                 }
                             }
                         }
@@ -84,7 +85,7 @@ public class EndIceSpikeFeature extends Feature<DefaultFeatureConfig> {
                             break;
                         }
 
-                        this.setBlockState(structureWorldAccess, blockPos2, EndBlocks.END_ICE.getDefaultState());
+                        this.setBlockState(structureWorldAccess, blockPos2, Registries.BLOCK.get(config.blockState()).getDefaultState());
                         blockPos2 = blockPos2.down();
                         --p;
                         if (p <= 0) {
