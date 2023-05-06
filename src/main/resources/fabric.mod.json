@@ -33,7 +33,7 @@
 		"minecraft": "~1.19.4",
 		"java": ">=17",
 		"fabric-api": "*",
-		"reach_entity_attributes": "2.3.2",
+		"reach-entity-attributes": ">=2.3.2",
 		"dawn": ">=4.2.0"
 	},
 	"suggests": {
