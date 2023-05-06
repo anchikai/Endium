@@ -21,6 +21,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> END_DUST_PLACED_KEY = registerKey("end_dust");
     public static final RegistryKey<PlacedFeature> END_ICE_PLACED_KEY = registerKey("end_ice_patch");
     public static final RegistryKey<PlacedFeature> END_ICE_SPIKE_PLACED_KEY = registerKey("end_ice_spike");
+    public static final RegistryKey<PlacedFeature> ICEBERG_END_PLACED_KEY = registerKey("iceberg_end");
 
     public static final RegistryKey<PlacedFeature> LUNGWORT_FLOWER_PLACED_KEY = registerKey("lungwort_flower");
 

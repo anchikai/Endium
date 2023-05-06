@@ -21,6 +21,8 @@ public class ModFeatureGen {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomeKeys.MELANCHO),
                 GenerationStep.Feature.TOP_LAYER_MODIFICATION, ModPlacedFeatures.END_ICE_SPIKE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomeKeys.MELANCHO),
+                GenerationStep.Feature.TOP_LAYER_MODIFICATION, ModPlacedFeatures.ICEBERG_END_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomeKeys.MELANCHO),
                 GenerationStep.Feature.SURFACE_STRUCTURES, EndPlacedFeatures.END_GATEWAY_RETURN);
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
