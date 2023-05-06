@@ -48,7 +48,7 @@
             }
         },
         {
-            "weight": 2,
+            "weight": 1,
             "element": {
                 "location": "endium:end/endium_mine/endium_mine_corridor_treasure",
                 "processors": "minecraft:empty",
