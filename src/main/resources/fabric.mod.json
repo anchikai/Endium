@@ -9,7 +9,8 @@
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/endium",
-		"sources": "https://https://github.com/anchikai/Endium"
+		"sources": "https://github.com/anchikai/Endium",
+		"issues": "https://github.com/anchikai/Endium/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/endium/icon.png",
@@ -34,7 +35,7 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"reach-entity-attributes": ">=2.3.2",
-		"dawn": ">=4.2.1"
+		"dawn": ">=4.2.1x"
 	},
 	"suggests": {
 		"forlorn": "*"
