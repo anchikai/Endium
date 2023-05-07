@@ -7,7 +7,7 @@ import net.anchikai.endium.client.render.entity.feature.EndiumElytraFeatureRende
 import net.anchikai.endium.item.CulminiteItems;
 import net.anchikai.endium.item.EndiumElytraItem;
 import net.anchikai.endium.item.EndiumItems;
-import net.anchikai.endium.screen.EndiumModScreenHandlers;
+import net.anchikai.endium.network.SyncPacket;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -47,7 +47,7 @@ public class EndiumModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(CHROMIUM_SHIELD_MODEL_LAYER, ShieldEntityModel::getTexturedModelData);
 
-        EndiumModScreenHandlers.initializeClient();
+        SyncPacket.init();
     }
 
     @Environment(EnvType.CLIENT)

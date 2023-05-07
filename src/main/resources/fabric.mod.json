@@ -34,7 +34,7 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"reach-entity-attributes": ">=2.3.2",
-		"dawn": ">=4.2.0"
+		"dawn": ">=4.2.1"
 	},
 	"suggests": {
 		"forlorn": "*"

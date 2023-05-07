@@ -5,15 +5,18 @@
     "mixins": [
         "AmaranthBoatEntityMixin",
         "AmaranthChestBoatEntityMixin",
+        "AnvilBlockMixin",
+        "AnvilScreenHandlerMixin",
         "BlockEntityTypeMixin",
         "BoatEntityTypeMixin",
         "EndiumDropMixin",
-        "EndiumDropSaveMixin",
-        "ServerPlayNetworkHandlerMixin"
+        "EndiumDropSaveMixin"
     ],
     "client": [
         "InGameOverlayRendererMixin",
-        "TridentEntityRendererMixin"
+        "ItemRendererMixin",
+        "TridentEntityRendererMixin",
+        "access.ItemRendererAccess"
     ],
     "injectors": {
         "defaultRequire": 1

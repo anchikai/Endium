@@ -9,7 +9,6 @@ import net.anchikai.endium.item.AmaranthItems;
 import net.anchikai.endium.item.ChromiumItems;
 import net.anchikai.endium.item.CulminiteItems;
 import net.anchikai.endium.item.EndiumItems;
-import net.anchikai.endium.screen.EndiumModScreenHandlers;
 import net.anchikai.endium.world.biome.EndBiomeRegistry;
 import net.anchikai.endium.world.gen.ModWorldGen;
 import net.anchikai.endium.world.gen.feature.EndiumFeatures;
@@ -47,7 +46,6 @@ public class EndiumMod implements ModInitializer {
 		ModFlammableBlockRegistry.registerFlammableBlocks();
 		ModStrippableBlockRegistry.registerStrippableBlocks();
 
-		EndiumModScreenHandlers.init();
 		ModEnchantments.register();
 		ModEvents.register();
 

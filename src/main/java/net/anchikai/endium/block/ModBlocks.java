@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
-        return Registry.register(Registries.BLOCK, new Identifier(EndiumMod.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, EndiumMod.id(name), block);
     }
 
     public static void registerBlockItem(String name, Block block, ItemGroup group) {
