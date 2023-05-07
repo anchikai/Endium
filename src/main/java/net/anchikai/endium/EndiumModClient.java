@@ -4,6 +4,7 @@ import net.anchikai.endium.block.AmaranthBlocks;
 import net.anchikai.endium.block.PlantBlocks;
 import net.anchikai.endium.client.render.entity.feature.CulminiteElytraFeatureRenderer;
 import net.anchikai.endium.client.render.entity.feature.EndiumElytraFeatureRenderer;
+import net.anchikai.endium.client.render.item.ModModelPredicateProvider;
 import net.anchikai.endium.item.CulminiteItems;
 import net.anchikai.endium.item.EndiumElytraItem;
 import net.anchikai.endium.item.EndiumItems;
@@ -48,6 +49,7 @@ public class EndiumModClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(CHROMIUM_SHIELD_MODEL_LAYER, ShieldEntityModel::getTexturedModelData);
 
         SyncPacket.init();
+        ModModelPredicateProvider.registerModItemModelPredicates();
     }
 
     @Environment(EnvType.CLIENT)

@@ -2,7 +2,6 @@ package net.anchikai.endium.mixin;
 
 import blue.endless.jankson.annotation.Nullable;
 import net.anchikai.endium.client.render.item.EndiumTridentItemRenderer;
-import net.anchikai.endium.item.ChromiumItems;
 import net.anchikai.endium.item.EndiumItems;
 import net.anchikai.endium.mixin.access.ItemRendererAccess;
 import net.fabricmc.api.EnvType;
@@ -53,27 +52,6 @@ public abstract class ItemRendererMixin {
                 model.getTransformation().getTransformation(renderMode).apply(leftHanded, matrices);
                 matrices.translate(-0.5D, -0.5D, -0.5D);
                 if (model.isBuiltin() || stack.getItem() == EndiumItems.ENDIUM_TRIDENT && !bl) {
-                    EndiumTridentItemRenderer.render(stack, renderMode, matrices, vertexConsumers, light, overlay);
-                } else {
-                    RenderLayer renderLayer = RenderLayers.getItemLayer(stack, true);
-                    VertexConsumer vertexConsumer4;
-                    vertexConsumer4 = ItemRenderer.getDirectItemGlintConsumer(vertexConsumers, renderLayer, true, stack.hasGlint());
-
-                    ((ItemRendererAccess) this).renderBakedItemModelInvoker(model, stack, light, overlay, matrices, vertexConsumer4);
-                }
-
-                matrices.pop();
-                ci.cancel();
-            } else if (stack.getItem() == ChromiumItems.CHROMIUM_SHIELD) {
-                matrices.push();
-                boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
-                if (stack.getItem() == ChromiumItems.CHROMIUM_SHIELD && bl) {
-                    model = ((ItemRendererAccess) this).getModelsInvoker().getModelManager().getModel(new ModelIdentifier("endium", "chromium_shield", "inventory"));
-                }
-
-                model.getTransformation().getTransformation(renderMode).apply(leftHanded, matrices);
-                matrices.translate(-0.5D, -0.5D, -0.5D);
-                if (model.isBuiltin() || stack.getItem() == ChromiumItems.CHROMIUM_SHIELD && !bl) {
                     EndiumTridentItemRenderer.render(stack, renderMode, matrices, vertexConsumers, light, overlay);
                 } else {
                     RenderLayer renderLayer = RenderLayers.getItemLayer(stack, true);

@@ -17,12 +17,12 @@
         },
         "firstperson_righthand": {
             "rotation": [ 0, 180, 5 ],
-            "translation": [ -10, 2, -10 ],
+            "translation": [ -10, -0.75, -10 ],
             "scale": [ 1.25, 1.25, 1.25 ]
         },
         "firstperson_lefthand": {
             "rotation": [ 0, 180, 5 ],
-            "translation": [ 10, 0, -10 ],
+            "translation": [ 10, -2.5, -10 ],
             "scale": [ 1.25, 1.25, 1.25 ]
         },
         "gui": {
@@ -32,12 +32,12 @@
         },
         "fixed": {
             "rotation": [ 0, 180, 0 ],
-            "translation": [ -4.5, 4.5, -5],
-            "scale":[ 0.55, 0.55, 0.55]
+            "translation": [ -2, 4, -5],
+            "scale":[ 0.5, 0.5, 0.5]
         },
         "ground": {
             "rotation": [ 0, 0, 0 ],
-            "translation": [ 2, 4, 2],
+            "translation": [ 4, 4, 2],
             "scale":[ 0.25, 0.25, 0.25]
         }
     },
@@ -46,7 +46,7 @@
             "predicate": {
                 "blocking": 1
             },
-            "model": "item/shield_blocking"
+            "model": "endium:item/chromium_shield_blocking"
         }
     ]
 }

@@ -10,9 +10,11 @@
         "BlockEntityTypeMixin",
         "BoatEntityTypeMixin",
         "EndiumDropMixin",
-        "EndiumDropSaveMixin"
+        "EndiumDropSaveMixin",
+        "ShieldDecorationRecipeMixin"
     ],
     "client": [
+        "BuiltinModelItemRendererMixin",
         "InGameOverlayRendererMixin",
         "ItemRendererMixin",
         "TridentEntityRendererMixin",
