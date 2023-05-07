@@ -35,9 +35,24 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"reach-entity-attributes": ">=2.3.2",
-		"dawn": ">=4.2.1x"
+		"dawn": ">=4.2.1"
 	},
 	"suggests": {
 		"forlorn": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.twitter": "https://twitter.com/anchikai_",
+				"modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/anchikais-endium",
+				"modmenu.modrinth": "https://modrinth.com/mod/endium",
+				"modmenu.github_releases": "https://github.com/anchikai/Endium/releases"
+			},
+			"modupdater": {
+				"strategy": "github",
+				"owner": "anchikai",
+				"repository": "Endium"
+			}
+		}
 	}
 }

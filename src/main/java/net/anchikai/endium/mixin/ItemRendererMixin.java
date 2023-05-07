@@ -2,6 +2,7 @@ package net.anchikai.endium.mixin;
 
 import blue.endless.jankson.annotation.Nullable;
 import net.anchikai.endium.client.render.item.EndiumTridentItemRenderer;
+import net.anchikai.endium.item.ChromiumItems;
 import net.anchikai.endium.item.EndiumItems;
 import net.anchikai.endium.mixin.access.ItemRendererAccess;
 import net.fabricmc.api.EnvType;
@@ -41,27 +42,50 @@ public abstract class ItemRendererMixin {
 
     @Inject(method = "renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/render/model/json/ModelTransformationMode;ZLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;IILnet/minecraft/client/render/model/BakedModel;)V", at = @At(value = "HEAD"), cancellable = true)
     public void renderItem(ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel model, CallbackInfo ci) {
-        if (!stack.isEmpty() && stack.getItem() == EndiumItems.ENDIUM_TRIDENT) {
-            matrices.push();
-            boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
-            if (stack.getItem() == EndiumItems.ENDIUM_TRIDENT && bl) {
-                model = ((ItemRendererAccess) this).getModelsInvoker().getModelManager().getModel(new ModelIdentifier("endium", "endium_trident", "inventory"));
+        if (!stack.isEmpty()) {
+            if (stack.getItem() == EndiumItems.ENDIUM_TRIDENT) {
+                matrices.push();
+                boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
+                if (stack.getItem() == EndiumItems.ENDIUM_TRIDENT && bl) {
+                    model = ((ItemRendererAccess) this).getModelsInvoker().getModelManager().getModel(new ModelIdentifier("endium", "endium_trident", "inventory"));
+                }
+
+                model.getTransformation().getTransformation(renderMode).apply(leftHanded, matrices);
+                matrices.translate(-0.5D, -0.5D, -0.5D);
+                if (model.isBuiltin() || stack.getItem() == EndiumItems.ENDIUM_TRIDENT && !bl) {
+                    EndiumTridentItemRenderer.render(stack, renderMode, matrices, vertexConsumers, light, overlay);
+                } else {
+                    RenderLayer renderLayer = RenderLayers.getItemLayer(stack, true);
+                    VertexConsumer vertexConsumer4;
+                    vertexConsumer4 = ItemRenderer.getDirectItemGlintConsumer(vertexConsumers, renderLayer, true, stack.hasGlint());
+
+                    ((ItemRendererAccess) this).renderBakedItemModelInvoker(model, stack, light, overlay, matrices, vertexConsumer4);
+                }
+
+                matrices.pop();
+                ci.cancel();
+            } else if (stack.getItem() == ChromiumItems.CHROMIUM_SHIELD) {
+                matrices.push();
+                boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
+                if (stack.getItem() == ChromiumItems.CHROMIUM_SHIELD && bl) {
+                    model = ((ItemRendererAccess) this).getModelsInvoker().getModelManager().getModel(new ModelIdentifier("endium", "chromium_shield", "inventory"));
+                }
+
+                model.getTransformation().getTransformation(renderMode).apply(leftHanded, matrices);
+                matrices.translate(-0.5D, -0.5D, -0.5D);
+                if (model.isBuiltin() || stack.getItem() == ChromiumItems.CHROMIUM_SHIELD && !bl) {
+                    EndiumTridentItemRenderer.render(stack, renderMode, matrices, vertexConsumers, light, overlay);
+                } else {
+                    RenderLayer renderLayer = RenderLayers.getItemLayer(stack, true);
+                    VertexConsumer vertexConsumer4;
+                    vertexConsumer4 = ItemRenderer.getDirectItemGlintConsumer(vertexConsumers, renderLayer, true, stack.hasGlint());
+
+                    ((ItemRendererAccess) this).renderBakedItemModelInvoker(model, stack, light, overlay, matrices, vertexConsumer4);
+                }
+
+                matrices.pop();
+                ci.cancel();
             }
-
-            model.getTransformation().getTransformation(renderMode).apply(leftHanded, matrices);
-            matrices.translate(-0.5D, -0.5D, -0.5D);
-            if (model.isBuiltin() || stack.getItem() == EndiumItems.ENDIUM_TRIDENT && !bl) {
-                EndiumTridentItemRenderer.render(stack, renderMode, matrices, vertexConsumers, light, overlay);
-            } else {
-                RenderLayer renderLayer = RenderLayers.getItemLayer(stack, true);
-                VertexConsumer vertexConsumer4;
-                vertexConsumer4 = ItemRenderer.getDirectItemGlintConsumer(vertexConsumers, renderLayer, true, stack.hasGlint());
-
-                ((ItemRendererAccess) this).renderBakedItemModelInvoker(model, stack, light, overlay, matrices, vertexConsumer4);
-            }
-
-            matrices.pop();
-            ci.cancel();
         }
     }
 
